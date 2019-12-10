@@ -64,7 +64,7 @@
 <!--[if IE 8]> <body class="lt-ie10 lt-ie9 ie8" > <![endif]-->
 <!--[if IE 9]> <body class="lt-ie10 ie9" > <![endif]-->
 <!--[if gt IE 9]> -->
-<body background="./files/banner-01_f4a2ea9.jpg">
+<body>
 <!-- <![endif]-->
 
 
@@ -96,7 +96,7 @@
 
 <div id="wrapper">
     
-    <div id="banner">
+    <div id="banner" style="background:url('./files/banner-01_f4a2ea9.jpg')">
         <div class="layout">
             <div class="content-box">
                 <form class="signup-mask" id="subscribe" novalidate="novalidate" data-widget-cid="widget-5">
@@ -119,6 +119,9 @@
                         <div class="input-wp form-group ui-form-item">
                             <label class="control-label" for="mobile"></label>
                             <input name="mobile" id="stu_mobile1" class="form-control" type="text" placeholder="请输入您的手机号码" data-widget-cid="widget-7" data-explain="">
+                            <br>
+                            <a href=""><input name="mobile" id="stu_mobile1" type="submit"  value="登陆" data-widget-cid="widget-7" data-explain=""></a><br>
+                            <input name="mobile" id="stu_mobile1" type="submit"  value="注册" data-widget-cid="widget-7" data-explain="">
                         <div class="ui-form-explain"></div></div>
                         
                         <input type="hidden" name="completed" value="1">
