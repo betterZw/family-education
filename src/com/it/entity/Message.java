@@ -1,11 +1,12 @@
 package com.it.entity;
 
 public class Message {
-	int m_id;
-    int m_from;
-    int m_to;
-    String m_context;
-    boolean m_isReply;
+	private int m_id;
+    private int m_from;
+    private int m_to;
+    private String m_context;
+	private boolean m_isReply;
+	
 	public Message() {
 		super();
 		// TODO Auto-generated constructor stub

@@ -1,12 +1,12 @@
 package com.it.entity;
 
 public class Teacher {
-	int t_id;
-    String t_userName;
-    String t_passWord;
-    boolean t_sex;
-    String t_subject;
-    String t_grade;
+	private int t_id;
+    private String t_userName;
+    private String t_passWord;
+    private boolean t_sex;
+    private String t_subject;
+    private String t_grade;
     
 	public Teacher() {
 		super();

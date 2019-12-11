@@ -1,9 +1,12 @@
 package com.it.entity;
 
 public class SysAdmin {
-	int a_id;
-    String a_userName;
-    String a_passWord;
+	private int a_id;
+    private String a_userName;
+	private String a_passWord;
+	private char a_type;
+
+
 	public SysAdmin() {
 		super();
 		// TODO Auto-generated constructor stub

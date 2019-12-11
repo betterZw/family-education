@@ -3,31 +3,32 @@ package com.it.entity;
 import java.util.Date;
 
 public class CourseFile {
-	int c_id;
-    int t_id;
-    String c_path;
-    boolean isDisplay;
-    Date c_date;
-    float c_size;
+	private int c_id;
+    private int c_teachId;
+    private String c_path;
+    private boolean c_isDisplay;
+    private Date c_date;
+	private float c_size;
+	
 	public CourseFile() {
 		super();
 	}
-	public CourseFile(int c_id, int t_id, String c_path, boolean isDisplay,
+	public CourseFile(int c_id, int c_teachId, String c_path, boolean c_isDisplay,
 			Date c_date, float c_size) {
 		super();
 		this.c_id = c_id;
-		this.t_id = t_id;
+		this.c_teachId = c_teachId;
 		this.c_path = c_path;
-		this.isDisplay = isDisplay;
+		this.c_isDisplay = c_isDisplay;
 		this.c_date = c_date;
 		this.c_size = c_size;
 	}
-	public CourseFile(int t_id, String c_path, boolean isDisplay, Date c_date,
+	public CourseFile(int c_teachId, String c_path, boolean c_isDisplay, Date c_date,
 			float c_size) {
 		super();
-		this.t_id = t_id;
+		this.c_teachId = c_teachId;
 		this.c_path = c_path;
-		this.isDisplay = isDisplay;
+		this.c_isDisplay = c_isDisplay;
 		this.c_date = c_date;
 		this.c_size = c_size;
 	}
@@ -37,11 +38,11 @@ public class CourseFile {
 	public void setC_id(int c_id) {
 		this.c_id = c_id;
 	}
-	public int getT_id() {
-		return t_id;
+	public int getc_teachId() {
+		return c_teachId;
 	}
-	public void setT_id(int t_id) {
-		this.t_id = t_id;
+	public void setc_teachId(int c_teachId) {
+		this.c_teachId = c_teachId;
 	}
 	public String getC_path() {
 		return c_path;
@@ -49,11 +50,11 @@ public class CourseFile {
 	public void setC_path(String c_path) {
 		this.c_path = c_path;
 	}
-	public boolean isDisplay() {
-		return isDisplay;
+	public boolean c_isDisplay() {
+		return c_isDisplay;
 	}
-	public void setDisplay(boolean isDisplay) {
-		this.isDisplay = isDisplay;
+	public void setDisplay(boolean c_isDisplay) {
+		this.c_isDisplay = c_isDisplay;
 	}
 	public Date getC_date() {
 		return c_date;
@@ -75,8 +76,8 @@ public class CourseFile {
 		result = prime * result + c_id;
 		result = prime * result + ((c_path == null) ? 0 : c_path.hashCode());
 		result = prime * result + Float.floatToIntBits(c_size);
-		result = prime * result + (isDisplay ? 1231 : 1237);
-		result = prime * result + t_id;
+		result = prime * result + (c_isDisplay ? 1231 : 1237);
+		result = prime * result + c_teachId;
 		return result;
 	}
 	@Override
@@ -102,16 +103,16 @@ public class CourseFile {
 			return false;
 		if (Float.floatToIntBits(c_size) != Float.floatToIntBits(other.c_size))
 			return false;
-		if (isDisplay != other.isDisplay)
+		if (c_isDisplay != other.c_isDisplay)
 			return false;
-		if (t_id != other.t_id)
+		if (c_teachId != other.c_teachId)
 			return false;
 		return true;
 	}
 	@Override
 	public String toString() {
-		return "CourseFile [c_id=" + c_id + ", t_id=" + t_id + ", c_path="
-				+ c_path + ", isDisplay=" + isDisplay + ", c_date=" + c_date
+		return "CourseFile [c_id=" + c_id + ", c_teachId=" + c_teachId + ", c_path="
+				+ c_path + ", c_isDisplay=" + c_isDisplay + ", c_date=" + c_date
 				+ ", c_size=" + c_size + "]";
 	}
     

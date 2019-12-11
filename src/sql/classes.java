@@ -10,8 +10,6 @@ class Student{
     String s_subject;
     String s_address;
     String s_mobile;
-
-
 }
 
 class Teacher{
@@ -21,8 +19,6 @@ class Teacher{
     boolean t_sex;
     String t_subject;
     String t_grade;
-
-
 }
 
 

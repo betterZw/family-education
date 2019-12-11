@@ -1,14 +1,15 @@
 package com.it.entity;
 
 public class Student {
-	int s_id;
-    String s_userName;
-    String s_passWord;
-    boolean s_sex;
-    String s_grade;
-    String s_subject;//¿ÆÄ¿
-    String s_address;
-    String s_mobile;
+	private int s_id;
+    private String s_userName;
+    private String s_passWord;
+    private boolean s_sex;
+    private String s_grade;
+    private String s_subject;
+    private String s_address;
+	private String s_mobile;
+	
 	public Student() {
 		super();
 	}
