@@ -1,7 +1,6 @@
 -- Create a new database called 'DatabaseName'
 -- Connect to the 'master' database to run this snippet
-USE master
-GO
+
 -- Create the new database if it does not exist already
 IF NOT EXISTS (
     SELECT name
@@ -11,14 +10,15 @@ IF NOT EXISTS (
 CREATE DATABASE family_education
 GO
 
-
+USE family_education
+GO
 -- Create a new table called 'Student' in schema 'SchemaName'
 -- Drop the table if it already exists
-IF OBJECT_ID('SchemaName.Student', 'U') IS NOT NULL
-DROP TABLE SchemaName.Student
+IF OBJECT_ID('Student', 'U') IS NOT NULL
+DROP TABLE Student
 GO
 -- Create the table in the specified schema
-CREATE TABLE SchemaName.Student
+CREATE TABLE Student
 (
     s_id INT NOT NULL PRIMARY KEY, -- primary key column
     s_userName varchar(16) NOT NULL UNIQUE,
@@ -35,11 +35,11 @@ GO
 
 -- Create a new table called 'Teacher' in schema 'SchemaName'
 -- Drop the table if it already exists
-IF OBJECT_ID('SchemaName.Teacher', 'U') IS NOT NULL
-DROP TABLE SchemaName.Teacher
+IF OBJECT_ID('Teacher', 'U') IS NOT NULL
+DROP TABLE Teacher
 GO
 -- Create the table in the specified schema
-CREATE TABLE SchemaName.Teacher
+CREATE TABLE Teacher
 (
     t_id INT NOT NULL PRIMARY KEY, -- primary key column
     t_userName varchar(16) NOT NULL UNIQUE,
@@ -54,11 +54,11 @@ GO
 
 -- Create a new table called 'SysAdmin' in schema 'SchemaName'
 -- Drop the table if it already exists
-IF OBJECT_ID('SchemaName.SysAdmin', 'U') IS NOT NULL
-DROP TABLE SchemaName.SysAdmin
+IF OBJECT_ID('SysAdmin', 'U') IS NOT NULL
+DROP TABLE SysAdmin
 GO
 -- Create the table in the specified schema
-CREATE TABLE SchemaName.SysAdmin
+CREATE TABLE SysAdmin
 (
     a_id INT NOT NULL PRIMARY KEY, -- primary key column
     a_userName varchar(16) NOT NULL UNIQUE,
@@ -71,14 +71,14 @@ GO
 
 -- Create a new table called 'Message' in schema 'SchemaName'
 -- Drop the table if it already exists
-IF OBJECT_ID('SchemaName.Message', 'U') IS NOT NULL
-DROP TABLE SchemaName.Message
+IF OBJECT_ID('Message', 'U') IS NOT NULL
+DROP TABLE Message
 GO
 -- Create the table in the specified schema
-CREATE TABLE SchemaName.Message
+CREATE TABLE Message
 (
     m_id INT NOT NULL PRIMARY KEY, -- primary key column
-    m_from INT NOT NULL, -- 信息发送来源, 老师或学生id
+    m_from INT NOT NULL, -- 信息发送来�? 老师或学生id
     m_to INT NOT NULL,
     m_context VARCHAR(1024),
     m_isReply BIT,
@@ -90,11 +90,11 @@ GO
 
 -- Create a new table called 'Complaint' in schema 'SchemaName'
 -- Drop the table if it already exists
-IF OBJECT_ID('SchemaName.Complaint', 'U') IS NOT NULL
-DROP TABLE SchemaName.Complaint
+IF OBJECT_ID('Complaint', 'U') IS NOT NULL
+DROP TABLE Complaint
 GO
 -- Create the table in the specified schema
-CREATE TABLE SchemaName.Complaint
+CREATE TABLE Complaint
 (
     com_id INT NOT NULL PRIMARY KEY, -- primary key column
     com_from INT NOT NULL,
@@ -108,11 +108,11 @@ GO
 
 -- Create a new table called 'CourseFile' in schema 'SchemaName'
 -- Drop the table if it already exists
-IF OBJECT_ID('SchemaName.CourseFile', 'U') IS NOT NULL
-DROP TABLE SchemaName.CourseFile
+IF OBJECT_ID('CourseFile', 'U') IS NOT NULL
+DROP TABLE CourseFile
 GO
 -- Create the table in the specified schema
-CREATE TABLE SchemaName.CourseFile
+CREATE TABLE CourseFile
 (
     c_id INT NOT NULL PRIMARY KEY, -- primary key column
     c_teachId INT NOT NULL,

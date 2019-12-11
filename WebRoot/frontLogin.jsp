@@ -4,10 +4,10 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<meta name="renderer" content="webkit">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>掌门1对1官网-中国高端在线1对1高中辅导品牌-清北复交浙精英在线1对1-在线一对一</title>
+	<title>前台登录页面</title>
 	<meta charset="utf-8">
 	<meta name="keywords" content="寒假在线一对一辅导,高中生在线1对1辅导,高中生在线一对一补习,在线一对一,高考,艺考">
-	<meta name="description" content="掌门人教育|掌门教育|掌门1对1|在线1对1|中国高端在线1对1高中辅导品牌|在线一对一">
+	<meta name="description" content="中国高端在线1对1高中辅导品牌|在线一对一">
 	
 	
 	<link rel="shortcut icon" href="https://www.zhangmen.com/static/common/static/lib/img/favicon.ico">
@@ -103,19 +103,34 @@
                     <div class="signup-input">
                         <div class="input-wp form-group ui-form-item">
                             <label class="control-label" for="name"></label>
-                            <input data-v-label="姓名" type="text" class="form-control" name="name" placeholder="请输入您孩子的姓名" id="s-name" data-widget-cid="widget-6" data-explain="">
+                            <input data-v-label="姓名" type="text" class="form-control" name="name" placeholder="请输入登录名" id="s-name" data-widget-cid="widget-6" data-explain="">
                         <div class="ui-form-explain"></div></div>
                         <div class="input-wp">
                             <div class="form-group ui-form-item">
                                 <label class="control-label" for="grade"></label>
-                                <select name="grade" id="grade" class="form-control" placeholder="年级"><option value="幼儿园小班">幼儿园小班</option><option value="幼儿园中班">幼儿园中班</option><option value="幼儿园大班">幼儿园大班</option><option value="小一">小一</option><option value="小二">小二</option><option value="小三">小三</option><option value="小四">小四</option><option value="小五">小五</option><option value="小六">小六</option><option value="初一">初一</option><option value="初二">初二</option><option value="初三">初三</option><option value="初三">初四</option><option value="高一" selected="">高一</option><option value="高二">高二</option><option value="高三">高三</option></select>
+                                <select name="grade" id="grade" class="form-control" placeholder="年级"><option value="幼儿园小班">幼儿园小班</option>
+                                <option value="幼儿园中班">幼儿园中班</option><option value="幼儿园大班">幼儿园大班</option><option value="小一">小一</option>
+                                <option value="小二">小二</option><option value="小三">小三</option><option value="小四">小四</option>
+                                <option value="小五">小五</option><option value="小六">小六</option><option value="初一">初一</option>
+                                <option value="初二">初二</option><option value="初三">初三</option><option value="初三">初四</option>
+                                <option value="高一" selected="">高一</option><option value="高二">高二</option><option value="高三">高三</option>
+                                </select>
 
                             </div>
                             <div class="form-group ui-form-item">
                                 <label class="control-label" for="weakSubject"></label>
                                 <select name="weakSubject" id="weak_subject" class="form-control" placeholder="科目"><option value="数学" selected=""> 数学</option><option value="语文"> 语文</option><option value="英语"> 英语</option><option value="政治"> 政治</option><option value="历史"> 历史</option><option value="地理"> 地理</option><option value="化学"> 化学</option><option value="生物"> 生物</option><option value="钢琴陪练"> 钢琴陪练</option><option value="物理"> 物理</option><option value="小提琴陪练"> 小提琴陪练</option></select>
                             </div>
+                            
+                            <div class="form-group ui-form-item">
+                                <label class="control-label" for="weakSubject1"></label>
+                                <select style="width:150px" name="Type" id="weak_subject1" class="form-control" placeholder="身份" >
+                                <option value="学生" selected="" > 学生</option><option value="老师"> 老师</option>
+                                
+                                </select>
+                            </div>
                         </div>
+                        <br><br><br><br>
                         <div class="input-wp form-group ui-form-item">
                             <label class="control-label" for="mobile"></label>
                             <input name="mobile" id="stu_mobile1" class="form-control" type="text" placeholder="请输入您的手机号码" data-widget-cid="widget-7" data-explain="">
