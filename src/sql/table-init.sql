@@ -21,7 +21,7 @@ GO
 CREATE TABLE SchemaName.Student
 (
     s_id INT NOT NULL PRIMARY KEY, -- primary key column
-    s_userName varchar(16) NOT NULL,
+    s_userName varchar(16) NOT NULL UNIQUE,
     s_passWord varchar(16) NOT NULL,
     s_sex BIT,
     s_grade VARCHAR(16),
@@ -42,7 +42,7 @@ GO
 CREATE TABLE SchemaName.Teacher
 (
     t_id INT NOT NULL PRIMARY KEY, -- primary key column
-    t_userName varchar(16) NOT NULL,
+    t_userName varchar(16) NOT NULL UNIQUE,
     t_passWord varchar(16) NOT NULL,
     t_sex BIT,
     t_subject VARCHAR(64),
@@ -61,7 +61,7 @@ GO
 CREATE TABLE SchemaName.SysAdmin
 (
     a_id INT NOT NULL PRIMARY KEY, -- primary key column
-    a_userName varchar(16) NOT NULL,
+    a_userName varchar(16) NOT NULL UNIQUE,
     a_passWord varchar(16) NOT NULL,
     a_type CHAR(1),
     -- specify more columns here
@@ -78,7 +78,7 @@ GO
 CREATE TABLE SchemaName.Message
 (
     m_id INT NOT NULL PRIMARY KEY, -- primary key column
-    m_from INT NOT NULL,
+    m_from INT NOT NULL, -- 信息发送来源, 老师或学生id
     m_to INT NOT NULL,
     m_context VARCHAR(1024),
     m_isReply BIT,
