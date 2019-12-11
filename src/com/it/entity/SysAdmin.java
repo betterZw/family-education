@@ -1,4 +1,4 @@
-package entity;
+package com.it.entity;
 
 public class SysAdmin {
 	int a_id;

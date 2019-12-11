@@ -1,4 +1,4 @@
-package entity;
+package com.it.entity;
 
 public class Teacher {
 	int t_id;

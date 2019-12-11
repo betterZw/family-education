@@ -1,4 +1,4 @@
-package entity;
+package com.it.entity;
 
 public class Message {
 	int m_id;
