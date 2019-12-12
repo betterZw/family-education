@@ -48,8 +48,10 @@ public class StudentDAOImpl implements IStudentDAO{
 				+ "s_address,s_mobile from student where s_userName = '"+name+"' and s_passWord = '"+pwd+"'";
 		DBMananger dbMananger = new DBMananger();
 		ResultSet rs = dbMananger.query(sql);
+		
 		try {
 			if(rs.next()){
+				
 				int s_id = rs.getInt(1);
 				String s_userName  = rs.getString(2);
 				String s_passWord = rs.getString(3);
@@ -57,9 +59,8 @@ public class StudentDAOImpl implements IStudentDAO{
 				String s_grade = rs.getString(5);
 				String s_subject = rs.getString(6);
 				String s_address = rs.getString(7);
-				String s_mobile = rs.getString(7);
+				String s_mobile = rs.getString(8);
 				student = new Student(s_id, s_userName, s_passWord, s_sex, s_grade, s_subject, s_address, s_mobile);
-				
 				
 			}
 		} catch (SQLException e) {

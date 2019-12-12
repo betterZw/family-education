@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.io.PrintWriter;
 
 import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -15,15 +16,8 @@ import com.it.dao.impl.StudentDAOImpl;
 import com.it.dao.impl.TeacherDAOImpl;
 import com.it.entity.Student;
 import com.it.entity.Teacher;
-
 public class UserLoginServlet extends HttpServlet {
 
-	
-	public void doGet(HttpServletRequest request, HttpServletResponse response)
-			throws ServletException, IOException {
-
-		this.doPost(request, response);
-	}
 
 	
 	public void doPost(HttpServletRequest request, HttpServletResponse response)
@@ -32,21 +26,34 @@ public class UserLoginServlet extends HttpServlet {
 		String name = request.getParameter("name");
 		String pwd = request.getParameter("pwd");
 		String option = request.getParameter("selector");//获取下拉框选项
+	
 		HttpSession session = request.getSession();
-		
+		String path = "/frontLogin.jsp";
 		if("学生".equals(option)){
 			IStudentDAO studentDAO = new StudentDAOImpl();
 			Student student = studentDAO.findByNameAndPwd(name, pwd);
-			session.setAttribute("student", student);
-			response.sendRedirect("first_page.html");
+			
+			
+			if(student != null){
+				session.setAttribute("student", student);
+				path = "/main_page.html";
+			}
 			
 		}else if("老师".equals(option)){
 			ITeacherDAO teacherDAO = new TeacherDAOImpl();
 			Teacher teacher = teacherDAO.findByNameAndPwd(name, pwd);
-			session.setAttribute("teacher", teacher);
-			response.sendRedirect("first_page.html");
+			
+			
+			if(teacher != null){
+				session.setAttribute("teacher", teacher);
+				path = "/main_page.html";
+			}
+			
+			
 		}
-		response.sendRedirect("frontLogin.jsp");
+		request.getRequestDispatcher(path).forward(request, response);
+		System.out.println(path);
+		
 	}
 
 }

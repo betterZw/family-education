@@ -152,7 +152,16 @@ insert into Teacher(t_userName,t_passWord,t_sex,t_subject,t_grade)
 values('刘洋','222',1,'数学','高二')
 
 -----------------------------------------------
-select s_id from student
+select s_id, s_userName,s_passWord,s_sex,s_grade,s_subject,s_address,s_mobilefrom student
+where s_userName = '' and s_passWord = ''
+
+select t_id,t_userName,t_passWord,t_sex,t_subject,t_grade from teacher
+wherer t_userName = '' and t_passWord = ''
+
+
+select s_id 
+from Student 
+where s_userName = '赵微';
 
 
 

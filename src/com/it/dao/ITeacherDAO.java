@@ -17,4 +17,6 @@ public interface ITeacherDAO {
 	
 	public Teacher findByNameAndPwd(String name,String pwd);
 	
+	public List<Teacher> findByGradeAndSubject(String grade,String subject);
+	
 }

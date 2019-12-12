@@ -14,7 +14,7 @@ public class DBMananger {
 	
 	public ResultSet query(String sql){
 		System.out.println(sql);
-		String url = "jdbc:sqlserver://127.0.0.1:1433;DatabaseName=jinzhibook";
+		String url = "jdbc:sqlserver://127.0.0.1:1433;DatabaseName=family_education";
 		
 		try {
 			//加载驱动
@@ -44,7 +44,7 @@ public class DBMananger {
 	public int update(String sql){
 		System.out.println(sql);
 		int rows = 0;//受sql语句影响的行数
-		String url = "jdbc:sqlserver://127.0.0.1:1433;DatabaseName=jinzhibook";
+		String url = "jdbc:sqlserver://127.0.0.1:1433;DatabaseName=family_education";
 		try {
 			Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
 			con = DriverManager.getConnection(url, "sa", "sa");

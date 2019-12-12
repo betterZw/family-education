@@ -99,7 +99,7 @@
     <div id="banner" style="background:url('./files/banner-01_f4a2ea9.jpg')">
         <div class="layout">
             <div class="content-box">
-                <form class="signup-mask" id="subscribe" novalidate="novalidate" data-widget-cid="widget-5" method="post">
+                <form class="signup-mask" id="subscribe" novalidate="novalidate" data-widget-cid="widget-5" method="post" action = "${pageContext.request.contextPath}/UserLoginServlet">
                     <div class="signup-input">
                     
                         <div class="input-wp form-group ui-form-item">
@@ -126,7 +126,7 @@
                             
                             <div class="form-group ui-form-item">
                                 <label class="control-label" for="weakSubject1"></label>
-                                <select style="width:286px" name="Type" id="weak_subject1" class="form-control" placeholder="身份" >
+                                <select style="width:286px" name="selector" id="weak_subject1" class="form-control" placeholder="身份" >
                                 <option value="学生" selected="" > 学生</option><option value="老师"> 老师</option>
                                 
                                 </select>
@@ -137,7 +137,7 @@
                             <label class="control-label" for="mobile"></label>
                             <input name="pwd" id="stu_mobile1" class="form-control" type="password" placeholder="请输入密码" data-widget-cid="widget-7" data-explain="">
                             <br>
-                            <a href="${pageContext.request.contextPath }/UserLoginServlet"><input name="mobile" id="stu_mobile1" type="submit"  value="登陆" data-widget-cid="widget-7" data-explain=""></a><br>
+                            <a href="${pageContext.request.contextPath}/UserLoginServlet"><input name="mobile" id="stu_mobile1" type="submit"  value="登陆" data-widget-cid="widget-7" data-explain=""></a><br>
                             <input name="mobile" id="stu_mobile1" type="submit"  value="注册" data-widget-cid="widget-7" data-explain="">
                         <div class="ui-form-explain"></div></div>
                         
