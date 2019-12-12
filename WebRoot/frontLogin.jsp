@@ -99,12 +99,14 @@
     <div id="banner" style="background:url('./files/banner-01_f4a2ea9.jpg')">
         <div class="layout">
             <div class="content-box">
-                <form class="signup-mask" id="subscribe" novalidate="novalidate" data-widget-cid="widget-5">
+                <form class="signup-mask" id="subscribe" novalidate="novalidate" data-widget-cid="widget-5" method="post">
                     <div class="signup-input">
+                    
                         <div class="input-wp form-group ui-form-item">
                             <label class="control-label" for="name"></label>
                             <input data-v-label="姓名" type="text" class="form-control" name="name" placeholder="请输入登录名" id="s-name" data-widget-cid="widget-6" data-explain="">
-                        <div class="ui-form-explain"></div></div>
+                        <div class="ui-form-explain"></div>
+                    </div>
                         <div class="input-wp">
                             <div class="form-group ui-form-item">
                                 <label class="control-label" for="grade"></label>
@@ -124,7 +126,7 @@
                             
                             <div class="form-group ui-form-item">
                                 <label class="control-label" for="weakSubject1"></label>
-                                <select style="width:150px" name="Type" id="weak_subject1" class="form-control" placeholder="身份" >
+                                <select style="width:286px" name="Type" id="weak_subject1" class="form-control" placeholder="身份" >
                                 <option value="学生" selected="" > 学生</option><option value="老师"> 老师</option>
                                 
                                 </select>
@@ -133,7 +135,7 @@
                         <br><br><br><br>
                         <div class="input-wp form-group ui-form-item">
                             <label class="control-label" for="mobile"></label>
-                            <input name="mobile" id="stu_mobile1" class="form-control" type="text" placeholder="请输入您的手机号码" data-widget-cid="widget-7" data-explain="">
+                            <input name="pwd" id="stu_mobile1" class="form-control" type="password" placeholder="请输入密码" data-widget-cid="widget-7" data-explain="">
                             <br>
                             <a href=""><input name="mobile" id="stu_mobile1" type="submit"  value="登陆" data-widget-cid="widget-7" data-explain=""></a><br>
                             <input name="mobile" id="stu_mobile1" type="submit"  value="注册" data-widget-cid="widget-7" data-explain="">

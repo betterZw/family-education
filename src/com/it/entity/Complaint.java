@@ -5,7 +5,7 @@ public class Complaint {
     private int com_from;
     private int com_to;
 	private String com_context;
-	private boolean com_isHandler;
+	private boolean com_isHandler;// «∑Ò¥¶¿Ì
 	public Complaint() {
 		super();
 	}

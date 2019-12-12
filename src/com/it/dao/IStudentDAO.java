@@ -14,5 +14,7 @@ public interface IStudentDAO {
 	public Student findById(int id);
 	
 	public List<Student> findAll();
+	
+	public Student findByNameAndPwd(String name,String pwd);
 
 }
