@@ -18,9 +18,10 @@ IF OBJECT_ID('Student', 'U') IS NOT NULL
 DROP TABLE Student
 GO
 -- Create the table in the specified schema
+---------------学生基本信息表-------------------
 CREATE TABLE Student
 (
-    s_id INT NOT NULL PRIMARY KEY, -- primary key column
+    s_id INT identity NOT NULL PRIMARY KEY, -- primary key column
     s_userName varchar(16) NOT NULL UNIQUE,
     s_passWord varchar(16) NOT NULL,
     s_sex BIT,
@@ -39,9 +40,10 @@ IF OBJECT_ID('Teacher', 'U') IS NOT NULL
 DROP TABLE Teacher
 GO
 -- Create the table in the specified schema
+-------------教师基本信息表---------------------
 CREATE TABLE Teacher
 (
-    t_id INT NOT NULL PRIMARY KEY, -- primary key column
+    t_id INT identity NOT NULL PRIMARY KEY, -- primary key column
     t_userName varchar(16) NOT NULL UNIQUE,
     t_passWord varchar(16) NOT NULL,
     t_sex BIT,
@@ -55,12 +57,14 @@ GO
 -- Create a new table called 'SysAdmin' in schema 'SchemaName'
 -- Drop the table if it already exists
 IF OBJECT_ID('SysAdmin', 'U') IS NOT NULL
+
 DROP TABLE SysAdmin
 GO
 -- Create the table in the specified schema
+--------------管理员基本信息表---------------
 CREATE TABLE SysAdmin
 (
-    a_id INT NOT NULL PRIMARY KEY, -- primary key column
+    a_id INT identity NOT NULL PRIMARY KEY, -- primary key column
     a_userName varchar(16) NOT NULL UNIQUE,
     a_passWord varchar(16) NOT NULL,
     a_type CHAR(1),
@@ -75,9 +79,10 @@ IF OBJECT_ID('Message', 'U') IS NOT NULL
 DROP TABLE Message
 GO
 -- Create the table in the specified schema
+------------留言与回复基本信息表--------------------------
 CREATE TABLE Message
 (
-    m_id INT NOT NULL PRIMARY KEY, -- primary key column
+    m_id  INT identity NOT NULL PRIMARY KEY, -- primary key column
     m_from INT NOT NULL, -- 淇℃伅鍙戦�佹潵婧? 鑰佸笀鎴栧鐢焛d
     m_to INT NOT NULL,
     m_context VARCHAR(1024),
@@ -91,12 +96,14 @@ GO
 -- Create a new table called 'Complaint' in schema 'SchemaName'
 -- Drop the table if it already exists
 IF OBJECT_ID('Complaint', 'U') IS NOT NULL
+
 DROP TABLE Complaint
 GO
 -- Create the table in the specified schema
+----------投诉基本信息表--------
 CREATE TABLE Complaint
 (
-    com_id INT NOT NULL PRIMARY KEY, -- primary key column
+    com_id INT identity NOT NULL PRIMARY KEY, -- primary key column
     com_from INT NOT NULL,
     com_to INT NOT NULL,
     com_context VARCHAR(1024),
@@ -112,9 +119,10 @@ IF OBJECT_ID('CourseFile', 'U') IS NOT NULL
 DROP TABLE CourseFile
 GO
 -- Create the table in the specified schema
+-----------课件基本信息表---------------
 CREATE TABLE CourseFile
 (
-    c_id INT NOT NULL PRIMARY KEY, -- primary key column
+    c_id INT identity NOT NULL PRIMARY KEY, -- primary key column
     c_teachId INT NOT NULL,
     c_path VARCHAR(512) NOT NULL,
     c_name VARCHAR(128) NOT NULL,
@@ -125,9 +133,26 @@ CREATE TABLE CourseFile
     -- specify more columns here
 );
 GO
+alter table CourseFile
+add constraint FK_c_teachId 
+	FOREIGN KEY(c_teachId) REFERENCES Teacher(t_id)
+GO
 
 
 
+------------------------插数据----------------------------
+insert into Student(s_userName,s_passWord,s_sex,s_grade,s_subject,s_address,s_mobile)
+values('赵微','123',1,'高一','英语','陕西西安','18202970787')
+
+insert into Student(s_userName,s_passWord,s_sex,s_grade,s_subject,s_address,s_mobile)
+values('李永辉','111',0,'高二','数学','陕西商洛','18202970786')
+
+
+insert into Teacher(t_userName,t_passWord,t_sex,t_subject,t_grade)
+values('刘洋','222',1,'数学','高二')
+
+-----------------------------------------------
+select s_id from student
 
 
 
