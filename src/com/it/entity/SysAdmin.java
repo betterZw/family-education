@@ -5,22 +5,21 @@ public class SysAdmin {
     private String a_userName;
 	private String a_passWord;
 	private char a_type;
-
-
 	public SysAdmin() {
 		super();
-		// TODO Auto-generated constructor stub
 	}
-	public SysAdmin(int a_id, String a_userName, String a_passWord) {
+	public SysAdmin(int a_id, String a_userName, String a_passWord, char a_type) {
 		super();
 		this.a_id = a_id;
 		this.a_userName = a_userName;
 		this.a_passWord = a_passWord;
+		this.a_type = a_type;
 	}
-	public SysAdmin(String a_userName, String a_passWord) {
+	public SysAdmin(String a_userName, String a_passWord, char a_type) {
 		super();
 		this.a_userName = a_userName;
 		this.a_passWord = a_passWord;
+		this.a_type = a_type;
 	}
 	public int getA_id() {
 		return a_id;
@@ -40,6 +39,12 @@ public class SysAdmin {
 	public void setA_passWord(String a_passWord) {
 		this.a_passWord = a_passWord;
 	}
+	public char getA_type() {
+		return a_type;
+	}
+	public void setA_type(char a_type) {
+		this.a_type = a_type;
+	}
 	@Override
 	public int hashCode() {
 		final int prime = 31;
@@ -47,6 +52,7 @@ public class SysAdmin {
 		result = prime * result + a_id;
 		result = prime * result
 				+ ((a_passWord == null) ? 0 : a_passWord.hashCode());
+		result = prime * result + a_type;
 		result = prime * result
 				+ ((a_userName == null) ? 0 : a_userName.hashCode());
 		return result;
@@ -67,6 +73,8 @@ public class SysAdmin {
 				return false;
 		} else if (!a_passWord.equals(other.a_passWord))
 			return false;
+		if (a_type != other.a_type)
+			return false;
 		if (a_userName == null) {
 			if (other.a_userName != null)
 				return false;
@@ -77,8 +85,9 @@ public class SysAdmin {
 	@Override
 	public String toString() {
 		return "SysAdmin [a_id=" + a_id + ", a_userName=" + a_userName
-				+ ", a_passWord=" + a_passWord + "]";
+				+ ", a_passWord=" + a_passWord + ", a_type=" + a_type + "]";
 	}
-    
-    
+
+
+	
 }

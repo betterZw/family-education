@@ -1,7 +1,6 @@
 -- Create a new database called 'DatabaseName'
 -- Connect to the 'master' database to run this snippet
-USE master
-GO
+
 -- Create the new database if it does not exist already
 IF NOT EXISTS (
     SELECT name
@@ -11,16 +10,18 @@ IF NOT EXISTS (
 CREATE DATABASE family_education
 GO
 
-
+USE family_education
+GO
 -- Create a new table called 'Student' in schema 'SchemaName'
 -- Drop the table if it already exists
-IF OBJECT_ID('SchemaName.Student', 'U') IS NOT NULL
-DROP TABLE SchemaName.Student
+IF OBJECT_ID('Student', 'U') IS NOT NULL
+DROP TABLE Student
 GO
 -- Create the table in the specified schema
-CREATE TABLE SchemaName.Student
+---------------—ß…˙ª˘±æ–≈œ¢±Ì-------------------
+CREATE TABLE Student
 (
-    s_id INT NOT NULL PRIMARY KEY, -- primary key column
+    s_id INT identity NOT NULL PRIMARY KEY, -- primary key column
     s_userName varchar(16) NOT NULL UNIQUE,
     s_passWord varchar(16) NOT NULL,
     s_sex BIT,
@@ -35,13 +36,14 @@ GO
 
 -- Create a new table called 'Teacher' in schema 'SchemaName'
 -- Drop the table if it already exists
-IF OBJECT_ID('SchemaName.Teacher', 'U') IS NOT NULL
-DROP TABLE SchemaName.Teacher
+IF OBJECT_ID('Teacher', 'U') IS NOT NULL
+DROP TABLE Teacher
 GO
 -- Create the table in the specified schema
-CREATE TABLE SchemaName.Teacher
+-------------ΩÃ ¶ª˘±æ–≈œ¢±Ì---------------------
+CREATE TABLE Teacher
 (
-    t_id INT NOT NULL PRIMARY KEY, -- primary key column
+    t_id INT identity NOT NULL PRIMARY KEY, -- primary key column
     t_userName varchar(16) NOT NULL UNIQUE,
     t_passWord varchar(16) NOT NULL,
     t_sex BIT,
@@ -54,13 +56,15 @@ GO
 
 -- Create a new table called 'SysAdmin' in schema 'SchemaName'
 -- Drop the table if it already exists
-IF OBJECT_ID('SchemaName.SysAdmin', 'U') IS NOT NULL
-DROP TABLE SchemaName.SysAdmin
+IF OBJECT_ID('SysAdmin', 'U') IS NOT NULL
+
+DROP TABLE SysAdmin
 GO
 -- Create the table in the specified schema
-CREATE TABLE SchemaName.SysAdmin
+--------------π‹¿Ì‘±ª˘±æ–≈œ¢±Ì---------------
+CREATE TABLE SysAdmin
 (
-    a_id INT NOT NULL PRIMARY KEY, -- primary key column
+    a_id INT identity NOT NULL PRIMARY KEY, -- primary key column
     a_userName varchar(16) NOT NULL UNIQUE,
     a_passWord varchar(16) NOT NULL,
     a_type CHAR(1),
@@ -71,14 +75,15 @@ GO
 
 -- Create a new table called 'Message' in schema 'SchemaName'
 -- Drop the table if it already exists
-IF OBJECT_ID('SchemaName.Message', 'U') IS NOT NULL
-DROP TABLE SchemaName.Message
+IF OBJECT_ID('Message', 'U') IS NOT NULL
+DROP TABLE Message
 GO
 -- Create the table in the specified schema
-CREATE TABLE SchemaName.Message
+------------¡Ù—‘”Îªÿ∏¥ª˘±æ–≈œ¢±Ì--------------------------
+CREATE TABLE Message
 (
-    m_id INT NOT NULL PRIMARY KEY, -- primary key column
-    m_from INT NOT NULL, -- ‰ø°ÊÅØÂèëÈÄÅÊù•Ê∫ê, ËÄÅÂ∏àÊàñÂ≠¶Áîüid
+    m_id  INT identity NOT NULL PRIMARY KEY, -- primary key column
+    m_from INT NOT NULL, -- ‰ø°ÊÅØÂèëÈÄÅÊù•Ê∫? ËÄÅÂ∏àÊàñÂ≠¶Áîüid
     m_to INT NOT NULL,
     m_context VARCHAR(1024),
     m_isReply BIT,
@@ -90,13 +95,15 @@ GO
 
 -- Create a new table called 'Complaint' in schema 'SchemaName'
 -- Drop the table if it already exists
-IF OBJECT_ID('SchemaName.Complaint', 'U') IS NOT NULL
-DROP TABLE SchemaName.Complaint
+IF OBJECT_ID('Complaint', 'U') IS NOT NULL
+
+DROP TABLE Complaint
 GO
 -- Create the table in the specified schema
-CREATE TABLE SchemaName.Complaint
+----------Õ∂Àﬂª˘±æ–≈œ¢±Ì--------
+CREATE TABLE Complaint
 (
-    com_id INT NOT NULL PRIMARY KEY, -- primary key column
+    com_id INT identity NOT NULL PRIMARY KEY, -- primary key column
     com_from INT NOT NULL,
     com_to INT NOT NULL,
     com_context VARCHAR(1024),
@@ -108,13 +115,14 @@ GO
 
 -- Create a new table called 'CourseFile' in schema 'SchemaName'
 -- Drop the table if it already exists
-IF OBJECT_ID('SchemaName.CourseFile', 'U') IS NOT NULL
-DROP TABLE SchemaName.CourseFile
+IF OBJECT_ID('CourseFile', 'U') IS NOT NULL
+DROP TABLE CourseFile
 GO
 -- Create the table in the specified schema
-CREATE TABLE SchemaName.CourseFile
+-----------øŒº˛ª˘±æ–≈œ¢±Ì---------------
+CREATE TABLE CourseFile
 (
-    c_id INT NOT NULL PRIMARY KEY, -- primary key column
+    c_id INT identity NOT NULL PRIMARY KEY, -- primary key column
     c_teachId INT NOT NULL,
     c_path VARCHAR(512) NOT NULL,
     c_name VARCHAR(128) NOT NULL,
@@ -125,9 +133,26 @@ CREATE TABLE SchemaName.CourseFile
     -- specify more columns here
 );
 GO
+alter table CourseFile
+add constraint FK_c_teachId 
+	FOREIGN KEY(c_teachId) REFERENCES Teacher(t_id)
+GO
 
 
 
+------------------------≤Â ˝æ›----------------------------
+insert into Student(s_userName,s_passWord,s_sex,s_grade,s_subject,s_address,s_mobile)
+values('’‘Œ¢','123',1,'∏ﬂ“ª','”¢”Ô','…¬Œ˜Œ˜∞≤','18202970787')
+
+insert into Student(s_userName,s_passWord,s_sex,s_grade,s_subject,s_address,s_mobile)
+values('¿Ó”¿ª‘','111',0,'∏ﬂ∂˛',' ˝—ß','…¬Œ˜…Ã¬Â','18202970786')
+
+
+insert into Teacher(t_userName,t_passWord,t_sex,t_subject,t_grade)
+values('¡ı—Û','222',1,' ˝—ß','∏ﬂ∂˛')
+
+-----------------------------------------------
+select s_id from student
 
 
 
