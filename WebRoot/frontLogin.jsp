@@ -132,13 +132,14 @@
                                 </select>
                             </div>
                         </div>
-                        <br><br><br><br>
+                        <br><br>
                         <div class="input-wp form-group ui-form-item">
                             <label class="control-label" for="mobile"></label>
                             <input name="pwd" id="stu_mobile1" class="form-control" type="password" placeholder="请输入密码" data-widget-cid="widget-7" data-explain="">
                             <br>
-                            <a href="${pageContext.request.contextPath}/UserLoginServlet"><input name="mobile" id="stu_mobile1" type="submit"  value="登陆" data-widget-cid="widget-7" data-explain=""></a><br>
-                            <input name="mobile" id="stu_mobile1" type="submit"  value="注册" data-widget-cid="widget-7" data-explain="">
+                            <a href="${pageContext.request.contextPath}/UserLoginServlet"><input  type="submit"  value="登陆" data-widget-cid="widget-7" data-explain=""></a><br>
+                            <a href="${pageContext.request.contextPath}/register.jsp"><input  type="submit"  value="注册" data-widget-cid="widget-7" data-explain=""></a>
+                            <br>
                         <div class="ui-form-explain"></div></div>
                         
                         <input type="hidden" name="completed" value="1">

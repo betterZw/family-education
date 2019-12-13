@@ -159,9 +159,7 @@ select t_id,t_userName,t_passWord,t_sex,t_subject,t_grade from teacher
 wherer t_userName = '' and t_passWord = ''
 
 
-select s_id 
-from Student 
-where s_userName = 'утн╒';
+
 
 
 

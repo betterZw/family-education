@@ -1,5 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=utf-8"%>
-<meta name="applicable-device" content="pc,mobile">
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <title>My JSP 'teachersList.jsp' starting page</title>
+   <meta name="applicable-device" content="pc,mobile">
 <meta name="MobileOptimized" content="width">
 <meta name="HandheldFriendly" content="true">
 <meta name="mobile-agent" content="format=xhtml; url=https://m.jiajiao114.com/sh/Teacher/">
@@ -7,7 +12,39 @@
 <title>【上海家教中心-上海家教中心】_家教114</title><meta name="description" content="【上海家教中心-上海家教中心】栏目，基于家教114强大的师资力量，择优为您推荐上海家教。是上海地区找家教、请家教、做家教的最佳平台。请家教热线：021-61300114 家教114"><meta name="keywords" content="家教,上海家教,上海家教中心,上海家教,上海上海家教"><link href="./main_page/style.css" rel="stylesheet" type="text/css">
 <link rel="icon" href="http://www.jiajiao114.com/images/favicon.ico" type="image/x-icon"> </head>
 <body style="margin-top: 43px;">
-<div id="header" class="fixed-header"><div class="header-top"><div class="container"><div class="left pull-left"><a href="http://www.jiajiao114.com/signin.php" class="login">教员请登录</a><a href="http://www.jiajiao114.com/member/signup2.php">立即注册</a></div><div class="right pull-right"><img src="./main_page/icon_phone.png" alt="021-61300114">上海请家教热线：021-61300114</div><div class="clear"></div></div></div><div class="logoer"><div class="container"><div class="logo pull-left"><a href="http://www.jiajiao114.com/" class="pull-left"><img src="./main_page/logo.png" title="上海家教" alt="上海家教"></a><div class="city pull-right"><span>上海</span><div class="city-down"><ul><li><a href="http://bj.jiajiao114.com/">北京</a></li><li><a href="http://gz.jiajiao114.com/">广州</a></li><li><a href="http://tj.jiajiao114.com/">天津</a></li><li><a href="http://sz.jiajiao114.com/">深圳</a></li><li><a href="http://nj.jiajiao114.com/">南京</a></li><li><a href="http://hz.jiajiao114.com/">杭州</a></li><li><a href="http://wh.jiajiao114.com/">武汉</a></li><li><a href="http://xa.jiajiao114.com/">西安</a></li><li><a href="http://cd.jiajiao114.com/">成都</a></li><div class="clear"></div></ul><a href="http://www.jiajiao114.com/change_city.php" class="more">更多城市</a></div></div><div class="clear"></div></div><div class="have pull-right"><a href="javascript:void(0);"><img src="./main_page/icon_teacher.png" alt=""><i onclick="yuyueCookie()">您已备选老师<span id="beixuan_count">0</span></i></a></div><div style="font-size:19px;font-family:STXingkai;float:right;line-height:40px;margin-right:30px;color:#666666;">教育的艺术在于鼓舞和唤醒</div><div class="clear"></div></div></div><form id="yuyue_submit" action="http://www.jiajiao114.com/xuqiu_bx.php" method="get">
+<div id="header" class="fixed-header">
+	<!-- <div class="header-top">
+		<div class="container">
+			<div class="left pull-left">
+				<a href="http://www.jiajiao114.com/signin.php" class="login">教员请登录</a>
+				<a href="http://www.jiajiao114.com/member/signup2.php">立即注册</a>
+			</div>
+		<div class="right pull-right"><img src="./main_page/icon_phone.png" alt="021-61300114">上海请家教热线：021-61300114</div>
+		<div class="clear"></div></div></div><div class="logoer">
+		<div class="container"><div class="logo pull-left">
+		<a href="http://www.jiajiao114.com/" class="pull-left">
+		<img src="./main_page/logo.png" title="上海家教" alt="上海家教"></a>
+		<div class="city pull-right"><span>上海</span><div class="city-down"><ul>
+		<li><a href="http://bj.jiajiao114.com/">北京</a></li>
+		<li><a href="http://gz.jiajiao114.com/">广州</a></li>
+		<li><a href="http://tj.jiajiao114.com/">天津</a></li>
+		<li><a href="http://sz.jiajiao114.com/">深圳</a></li>
+		<li><a href="http://nj.jiajiao114.com/">南京</a></li>
+		<li><a href="http://hz.jiajiao114.com/">杭州</a></li>
+		<li><a href="http://wh.jiajiao114.com/">武汉</a></li>
+		<li><a href="http://xa.jiajiao114.com/">西安</a></li>
+		<li><a href="http://cd.jiajiao114.com/">成都</a></li>
+		<div class="clear"></div></ul><a href="http://www.jiajiao114.com/change_city.php" class="more">更多城市</a>
+		</div>
+		</div>
+		<div class="clear">
+		</div>
+		</div>
+		<div class="have pull-right">
+		<a href="javascript:void(0);">
+		<img src="./main_page/icon_teacher.png" alt="">
+		<i onclick="yuyueCookie()">您已备选老师<span id="beixuan_count">0</span></i>
+		</a></div><div style="font-size:19px;font-family:STXingkai;float:right;line-height:40px;margin-right:30px;color:#666666;">教育的艺术在于鼓舞和唤醒</div><div class="clear"></div></div></div><form id="yuyue_submit" action="http://www.jiajiao114.com/xuqiu_bx.php" method="get"> -->
 			    <input type="hidden" name="tid" id="cookietid" value="0">
 			 </form>
 <script src="./main_page/sdk"></script><script charset="utf-8" src="./main_page/insert_bdtj"></script><script src="./main_page/hm.js.下载"></script><script> 
@@ -30,6 +67,40 @@ function go_teacher_detail(){
         s.parentNode.insertBefore(hm, s);
     })();
 </script>
+    
+  </head>
+    <body style="margin-top: 43px;">
+<div id="header" class="fixed-header"><div class="header-top">
+<!-- <div class="container">
+<div class="left pull-left">
+<a href="http://www.jiajiao114.com/signin.php" class="login">教员请登录</a>
+<a href="http://www.jiajiao114.com/member/signup2.php">立即注册</a>
+</div>
+<div class="right pull-right"><img src="./main_page/icon_phone.png" alt="021-61300114">上海请家教热线：021-61300114</div><div class="clear"></div></div></div>
+<div class="logoer"><div class="container"><div class="logo pull-left"><a href="http://www.jiajiao114.com/" class="pull-left"><img src="./main_page/logo.png" title="上海家教" alt="上海家教"></a><div class="city pull-right"><span>上海</span><div class="city-down"><ul><li><a href="http://bj.jiajiao114.com/">北京</a></li><li><a href="http://gz.jiajiao114.com/">广州</a></li><li><a href="http://tj.jiajiao114.com/">天津</a></li><li><a href="http://sz.jiajiao114.com/">深圳</a></li><li><a href="http://nj.jiajiao114.com/">南京</a></li><li><a href="http://hz.jiajiao114.com/">杭州</a></li><li><a href="http://wh.jiajiao114.com/">武汉</a></li><li><a href="http://xa.jiajiao114.com/">西安</a></li><li><a href="http://cd.jiajiao114.com/">成都</a></li><div class="clear"></div></ul><a href="http://www.jiajiao114.com/change_city.php" class="more">更多城市</a></div></div><div class="clear"></div></div><div class="have pull-right"><a href="javascript:void(0);"><img src="./main_page/icon_teacher.png" alt=""><i onclick="yuyueCookie()">您已备选老师<span id="beixuan_count">0</span></i></a></div><div style="font-size:19px;font-family:STXingkai;float:right;line-height:40px;margin-right:30px;color:#666666;">教育的艺术在于鼓舞和唤醒</div><div class="clear"></div></div></div> -->
+<form id="yuyue_submit" action="http://www.jiajiao114.com/xuqiu_bx.php" method="get">
+			    <input type="hidden" name="tid" id="cookietid" value="0">
+</form>
+<script src="./main_page/sdk"></script><script charset="utf-8" src="./main_page/insert_bdtj"></script><script src="./main_page/hm.js.下载"></script><script> 
+
+function go_teacher_detail(){
+	var tid = document.getElementById("bianhao");
+	location.href="/teacher/t-"+tid.value+".html";
+}
+
+</script>
+
+	<!-- <div class="nav">
+		<div class="container">
+            <script>
+    var _hmt = _hmt || [];
+    (function() {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?37e4f3e1af4b0922381d2be8a23a5a1d";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script> -->
 <div class="find-teacher pull-left hide-down">
 	<div class="top">
 		<a href="http://www.jiajiao114.com/l-c1/">找老师<span><img src="./main_page/icon_down.png" alt=""></span></a>
@@ -368,7 +439,8 @@ function go_teacher_detail(){
 
 	<div id="content">
 		<div class="container">
-			<div class="teacher-list"><ul><li onclick="location.href=&#39;http://www.jiajiao114.com/teacher/368209.html&#39;" style="cursor: pointer;">
+			<div class="teacher-list"><ul>
+			<li onclick="location.href=&#39;http://www.jiajiao114.com/teacher/368209.html&#39;" style="cursor: pointer;">
 	        	<div class="left">
 	        		<div class="teacher-pic">
 	        			<div class="pic">
@@ -1200,4 +1272,6 @@ function go_teacher_detail(){
 </script>
 
 
-</div></body></html>
+</div>
+  </body>
+</html>

@@ -26,7 +26,7 @@ public class FindAllTeachersServlet extends HttpServlet {
 		ITeacherDAO teacherDAO = new TeacherDAOImpl();
 		List<Teacher> teachers = teacherDAO.findByGradeAndSubject(grade, subject);
 		request.setAttribute("teachers", teachers);
-		request.getRequestDispatcher("/main_page.jsp").forward(request, response);
+		request.getRequestDispatcher("/teachersList.jsp").forward(request, response);
 		
 	}
 
