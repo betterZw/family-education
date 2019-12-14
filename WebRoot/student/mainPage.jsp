@@ -110,15 +110,15 @@
 									<dt>小学</dt>
 									<dd>
 										<a
-											href="http://localhost:8080/17_familyEducation/FindTeachersByGradeAndSubjectServlet?grade=高一&subject=数学">小学数学</a>
+											href="http://localhost:8080/family-education/FindTeachersByGradeAndSubjectServlet?grade=高一&subject=数学">小学数学</a>
 									</dd>
 									<dd>
 										<a
-											href="http://localhost:8080/17_familyEducation/FindTeachersByGradeAndSubjectServlet?grade=小学&subject=英语">小学英语</a>
+											href="http://localhost:8080/family-education/FindTeachersByGradeAndSubjectServlet?grade=小学&subject=英语">小学英语</a>
 									</dd>
 									<dd>
 										<a
-											href="http://localhost:8080/17_familyEducation/FindTeachersByGradeAndSubjectServlet?grade=小学&subject=语文">小学语文</a>
+											href="http://localhost:8080/family-education/FindTeachersByGradeAndSubjectServlet?grade=小学&subject=语文">小学语文</a>
 									</dd>
 								</dl>
 							</li>
@@ -127,19 +127,19 @@
 									<dt>初中</dt>
 									<dd>
 										<a
-											href="http://localhost:8080/17_familyEducation/FindTeachersByGradeAndSubjectServlet?grade=初一&subject=数学">初一数学</a>
+											href="http://localhost:8080/family-education/FindTeachersByGradeAndSubjectServlet?grade=初一&subject=数学">初一数学</a>
 									</dd>
 									<dd>
 										<a
-											href="http://localhost:8080/17_familyEducation/FindTeachersByGradeAndSubjectServlet?grade=初二&subject=数学">初二数学</a>
+											href="http://localhost:8080/family-education/FindTeachersByGradeAndSubjectServlet?grade=初二&subject=数学">初二数学</a>
 									</dd>
 									<dd>
 										<a
-											href="http://localhost:8080/17_familyEducation/FindTeachersByGradeAndSubjectServlet?grade=初一&subject=英语">初一英语</a>
+											href="http://localhost:8080/family-education/FindTeachersByGradeAndSubjectServlet?grade=初一&subject=英语">初一英语</a>
 									</dd>
 									<dd>
 										<a
-											href="http://localhost:8080/17_familyEducation/FindTeachersByGradeAndSubjectServlet?grade=初二&subject=英语">初二英语</a>
+											href="http://localhost:8080/family-education/FindTeachersByGradeAndSubjectServlet?grade=初二&subject=英语">初二英语</a>
 									</dd>
 								</dl>
 							</li>
@@ -148,19 +148,19 @@
 									<dt>高中</dt>
 									<dd>
 										<a
-											href="http://localhost:8080/17_familyEducation/FindTeachersByGradeAndSubjectServlet?grade=高一&subject=数学">高一数学</a>
+											href="http://localhost:8080/family-education/FindTeachersByGradeAndSubjectServlet?grade=高一&subject=数学">高一数学</a>
 									</dd>
 									<dd>
 										<a
-											href="http://localhost:8080/17_familyEducation/FindTeachersByGradeAndSubjectServlet?grade=高二&subject=数学">高二数学</a>
+											href="http://localhost:8080/family-education/FindTeachersByGradeAndSubjectServlet?grade=高二&subject=数学">高二数学</a>
 									</dd>
 									<dd>
 										<a
-											href="http://localhost:8080/17_familyEducation/FindTeachersByGradeAndSubjectServlet?grade=高一&subject=英语">高一英语</a>
+											href="http://localhost:8080/family-education/FindTeachersByGradeAndSubjectServlet?grade=高一&subject=英语">高一英语</a>
 									</dd>
 									<dd>
 										<a
-											href="http://localhost:8080/17_familyEducation/FindTeachersByGradeAndSubjectServlet?grade=高二&subject=英语">高二英语</a>
+											href="http://localhost:8080/family-education/FindTeachersByGradeAndSubjectServlet?grade=高二&subject=英语">高二英语</a>
 									</dd>
 								</dl>
 							</li>
@@ -175,7 +175,7 @@
 								src="./main_page/hot.png" alt=""></i></a></li>
 					<li class=""><a href="http://www.jiajiao114.com/xuqiu.php">快速请家教</a></li>
 					<li class=""><a href="http://www.jiajiao114.com/xueyuan/">文件共享</a></li>
-					<li class=""><a href="individual_center.jsp">个人中心</a></li>
+					<li class=""><a href="${pageContext.request.contextPath }/UpdateStudentServlet?id=">个人中心</a></li>
 					<li class=""><a
 						href="http://www.jiajiao114.com/help/jiajiao_fee.php">投诉</a></li>
 					<div class="clear"></div>
@@ -485,31 +485,31 @@
 						<li><a href="http://www.jiajiao114.com/l-c1-a1-e3/">上外家教</a>
 						</li>
 						<li><a
-							href="http://localhost:8080/17_familyEducation/FindTeachersByGradeAndSubjectServlet?grade=高一&subject=数学112/">初三英语家教</a>
+							href="http://localhost:8080/family-education/FindTeachersByGradeAndSubjectServlet?grade=高一&subject=数学112/">初三英语家教</a>
 						</li>
 						<li><a
-							href="http://localhost:8080/17_familyEducation/FindTeachersByGradeAndSubjectServlet?grade=高一&subject=数学119/">初三数学家教</a>
+							href="http://localhost:8080/family-education/FindTeachersByGradeAndSubjectServlet?grade=高一&subject=数学119/">初三数学家教</a>
 						</li>
 						<li><a
-							href="http://localhost:8080/17_familyEducation/FindTeachersByGradeAndSubjectServlet?grade=高一&subject=数学126/">初三物理家教</a>
+							href="http://localhost:8080/family-education/FindTeachersByGradeAndSubjectServlet?grade=高一&subject=数学126/">初三物理家教</a>
 						</li>
 						<li><a
-							href="http://localhost:8080/17_familyEducation/FindTeachersByGradeAndSubjectServlet?grade=高一&subject=数学120/">初三化学家教</a>
+							href="http://localhost:8080/family-education/FindTeachersByGradeAndSubjectServlet?grade=高一&subject=数学120/">初三化学家教</a>
 						</li>
 						<li><a
-							href="http://localhost:8080/17_familyEducation/FindTeachersByGradeAndSubjectServlet?grade=高一&subject=数学115/">高三英语家教</a>
+							href="http://localhost:8080/family-education/FindTeachersByGradeAndSubjectServlet?grade=高一&subject=数学115/">高三英语家教</a>
 						</li>
 						<li><a
-							href="http://localhost:8080/17_familyEducation/FindTeachersByGradeAndSubjectServlet?grade=高一&subject=数学124/">高三数学家教</a>
+							href="http://localhost:8080/family-education/FindTeachersByGradeAndSubjectServlet?grade=高一&subject=数学124/">高三数学家教</a>
 						</li>
 						<li><a
-							href="http://localhost:8080/17_familyEducation/FindTeachersByGradeAndSubjectServlet?grade=高一&subject=数学128/">高三物理家教</a>
+							href="http://localhost:8080/family-education/FindTeachersByGradeAndSubjectServlet?grade=高一&subject=数学128/">高三物理家教</a>
 						</li>
 						<li><a
-							href="http://localhost:8080/17_familyEducation/FindTeachersByGradeAndSubjectServlet?grade=高一&subject=数学125/">高三化学家教</a>
+							href="http://localhost:8080/family-education/FindTeachersByGradeAndSubjectServlet?grade=高一&subject=数学125/">高三化学家教</a>
 						</li>
 						<li><a
-							href="http://localhost:8080/17_familyEducation/FindTeachersByGradeAndSubjectServlet?grade=高一&subject=数学131/">上海钢琴家教</a>
+							href="http://localhost:8080/family-education/FindTeachersByGradeAndSubjectServlet?grade=高一&subject=数学131/">上海钢琴家教</a>
 						</li>
 						<div class="clear"></div>
 					</ul>
