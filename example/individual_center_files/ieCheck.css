@@ -1,0 +1,34 @@
+#kickIe { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 80px; background: #000; filter: alpha(opacity=95); opacity: 0.95; z-index: 1001; line-height: 70px; font-size: 20px; text-align: center; color: #fff; font-family: Arial, "sans-serif", "宋体"; }
+.kick_jisu { color: #00a5ed;}
+.kick_upgrade { color: #fff; padding: 10px 20px; background: #00a5ed; }
+.kick_close { font-size: 50px; cursor: pointer; vertical-align: top; margin-left: 20px; }
+#kickIe_bg { display: none; background: #000; filter: alpha(opacity=25); opacity: 0.25; width: 100%; height: 100%; z-index: 1001; position: fixed; top: 0; left: 0; }
+#kickIe_con { display: none; width: 1000px; height: 770px; position: absolute; margin: -385px 0 0 -500px; top: 50%; left: 50%; z-index: 1002; background: #f2f2f2; }
+.kickIe_con_padd { padding: 20px 30px; }
+.kickIe_con_head { position: relative; width: 100%; }
+.kickIe_con_head h5 { font-size: 22px; font-weight: 700; line-height: 1.5em; color: #666; }
+.kickIe_con_close { position: absolute; right: 0; top: -15px; cursor: pointer; font-size: 40px; color: #b3b3b3; }
+.kickIe_con_ie { width: 100%; padding-top: 20px; font-size: 16px; }
+.kickIe_con_ie a { color: #999; }
+.kickIe_con_ie div { width: 14%; float: left; height: 110px; padding-top: 75px; text-align: center; overflow: hidden; border: 1px #f2f2f2 solid; }
+.kickIe_con_ie div.active { border: 1px #d9d9d9 solid; }
+.kickIe_con_ie .list_1 { background: url("/appstore/img/help/ie.jpg") no-repeat 41px 10px; }
+.kickIe_con_ie .list_1.active { background: #fff url("/appstore/img/help/ie.jpg") no-repeat 41px -163px; }
+.kickIe_con_ie .list_2 { background: url("/appstore/img/help/ie.jpg") no-repeat -84px 10px; }
+.kickIe_con_ie .list_2.active { background: #fff url("/appstore/img/help/ie.jpg") no-repeat -84px -163px; }
+.kickIe_con_ie .list_3 { background: url("/appstore/img/help/ie.jpg") no-repeat -228px 10px; }
+.kickIe_con_ie .list_3.active { background: url("/appstore/img/help/ie.jpg") no-repeat -228px  -163px; }
+.kickIe_con_ie .list_4 { background: url("/appstore/img/help/ie.jpg") no-repeat -364px 10px; }
+.kickIe_con_ie .list_4.active { background: url("/appstore/img/help/ie.jpg") no-repeat -364px -163px; }
+.kickIe_con_ie .list_5 { background: url("/appstore/img/help/ie.jpg") no-repeat -499px 10px; }
+.kickIe_con_ie .list_5.active { background: url("/appstore/img/help/ie.jpg") no-repeat -499px -163px; }
+.kickIe_con_ie .list_6 { background: url("/appstore/img/help/ie.jpg") no-repeat -643px 10px; }
+.kickIe_con_ie .list_6.active { background: url("/appstore/img/help/ie.jpg") no-repeat -643px -163px; }
+.kickIe_con_ie .list_7 { background: url("/appstore/img/help/ie.jpg") no-repeat -785px 10px; }
+.kickIe_con_ie .list_7.active { background: url("/appstore/img/help/ie.jpg") no-repeat -785px -163px; }
+.kickIe_con { width: 100%; margin-top: 15px; border-top: 1px #d9d9d9 solid; height: 540px; overflow-y: scroll; }
+.kickIe_con h6 { font-size: 18px; font-weight: 700; color: #808080; line-height: 1.5em; margin: 15px 0; }
+.kickIe_con p { font-size: 14px; color: #999;}
+.kickIe_con_list p.update { margin-top: 80px; font-size: 24px; color: #999; }
+.kickIe_con_list a.select_chrome { width: 70px; line-height: 70px; background: url("/appstore/img/help/ie.jpg") -995px 0; display: inline-block; }
+.kick_upgrade:hover { color: #fff; }

@@ -1,0 +1,477 @@
+body {
+  background-color: #fff;
+}
+
+.nav {
+  background-color: white;
+}
+
+.hidden {
+  display: none;
+}
+
+* {
+  transition: color ease-in-out 0.2s;
+}
+
+a {
+  color: #333;
+}
+a:hover {
+  color: #00a5ed;
+}
+
+.block-center {
+  text-align: center;
+}
+
+.center {
+  display: block;
+  margin: 0 auto;
+}
+
+.w100 {
+  width: 100%;
+}
+
+.open-nav {
+  height: 70px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 999;
+  zoom: 1;
+}
+.open-nav .nav-user {
+  text-align: left;
+  width: 13%;
+}
+.open-nav .nav-user:hover .sub-menu {
+  display: block;
+}
+.open-nav .nav-user span {
+  width: 96px;
+  display: inline-block;
+  vertical-align: middle;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.open-nav .nav-user img {
+  display: inline-block;
+  width: 45px;
+  height: 45px;
+  vertical-align: middle;
+  margin-right: 5px;
+  border: 3px solid rgba(0, 0, 0, 0.6);
+  border-radius: 50%;
+}
+.open-nav .nav-user .sub-menu {
+  display: none;
+  background-color: #fff;
+  padding-left: 15px;
+  padding-right: 15px;
+  text-align: center;
+}
+.open-nav .nav-user .sub-menu .cont {
+  height: 50px;
+  line-height: 50px;
+  cursor: pointer;
+}
+.open-nav .nav-user .sub-menu .cont:hover {
+  color: #00a5ed;
+}
+.open-nav .nav-user .sub-menu .cont:first-child {
+  border-bottom: 1px solid #bbb;
+}
+.open-nav li {
+  float: left;
+  height: 64px;
+  line-height: 64px;
+  width: 10%;
+  text-align: center;
+  margin-right: 40px;
+}
+.open-nav li:first-child {
+  text-align: left;
+  margin-right: 0;
+}
+.open-nav li:first-child:hover {
+  background-color: transparent;
+}
+.open-nav li a {
+  display: block;
+  color: #333;
+  font-size: 16px;
+}
+.open-nav li a.last {
+  display: inline;
+}
+.open-nav li:first-child {
+  width: 25%;
+}
+.open-nav li:last-child {
+  margin-right: 0;
+}
+.open-nav li:last-child:hover {
+  background-color: #fff;
+}
+.open-nav li.active {
+  border-bottom: 3px solid #1bc0eb;
+  border-radius: 1px;
+}
+.open-nav li:hover {
+  background-color: #edf5fe;
+}
+.open-nav li.message-box {
+  position: relative;
+  width: 50px;
+  margin-right: 40px;
+}
+.open-nav li.message-box i.dot {
+  position: absolute;
+  top: 0;
+  right: 2px;
+  width: 2px;
+  height: 2px;
+  display: block;
+  background-color: #ff4e33;
+}
+.open-nav li.message-box .icon-message {
+  position: relative;
+  font-size: 24px;
+}
+.open-nav li.message-box .icon-message:hover:before {
+  color: #00a5ed;
+  transition: 0.2s ease-in-out;
+}
+.open-nav li.message-box .icon-message.active:before {
+  color: #00a5ed;
+}
+.open-nav li.message-box .icon-message.new-message:after {
+  content: ' ';
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  display: block;
+  background-color: #ff4e33;
+}
+.open-nav li.message-box:hover {
+  cursor: pointer;
+  background-color: transparent;
+}
+
+.icon-arrow-right {
+  display: inline-block;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+}
+
+.icon-arrow-right.active {
+  transform: rotate(90deg);
+  -webkit-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+}
+
+nav.menu {
+  float: left;
+}
+nav.menu .list {
+  cursor: pointer;
+}
+nav.menu .list .box {
+  width: 200px;
+  height: 60px;
+  line-height: 60px;
+  background-color: #4c5e71;
+  border-top: 1px solid #556678;
+  border-bottom: 1px solid #556678;
+}
+nav.menu .list .box.m-active {
+  background-color: #3d4f62;
+}
+nav.menu .list.active .box {
+  border-left: 6px solid #1bc0eb;
+}
+nav.menu .list .txt {
+  margin-left: 10px;
+  color: white;
+  width: 80%;
+  display: inline-block;
+  font-size: 16px;
+}
+nav.menu .list .sub-menu .cont {
+  color: white;
+  font-size: 14px;
+  display: block;
+  width: 200px;
+  height: 0;
+  overflow: hidden;
+  border: none;
+  line-height: 40px;
+  background-color: #46586b;
+  padding-left: 16px;
+  transition: height 0.3s ease-in-out;
+  -webkit-transition: height 0.3s ease-in-out;
+  -o-transition: height 0.3s ease-in-out;
+  -moz-transition: height 0.3s ease-in-out;
+  cursor: pointer;
+}
+nav.menu .list .sub-menu .cont:hover {
+  background-color: #3d4f62;
+}
+nav.menu .list .sub-menu.active li {
+  position: relative;
+}
+nav.menu .list .sub-menu.active li .cont {
+  height: 40px;
+  border-top: 1px solid #556678;
+  border-bottom: 1px solid #556678;
+}
+nav.menu .list .sub-menu.active li.active a {
+  background-color: #3d4f62;
+}
+nav.menu .list .sub-menu.active li.active .icon-triangle {
+  position: absolute;
+  right: -10px;
+  top: 30%;
+  width: 0;
+  height: 0;
+  border-top: 8px solid transparent;
+  border-left: 10px solid #3d4f62;
+  border-bottom: 8px solid transparent;
+}
+
+.no-data {
+  padding-top: 10%;
+  padding-bottom: 10%;
+  font-size: 24px;
+  color: #666666;
+  text-align: center;
+}
+
+.dialog-main {
+  width: 450px;
+}
+
+.dialog-content .icon-close2 {
+  font-size: 20px;
+  cursor: pointer;
+}
+.dialog-content .login-container {
+  padding-left: 30px;
+  padding-right: 30px;
+}
+.dialog-content .login-container img {
+  width: 204px;
+  margin: 5px auto 40px;
+  display: block;
+}
+.dialog-content .login-container input {
+  height: 50px;
+  font-size: 18px;
+}
+.dialog-content .login-container .red {
+  font-size: 14px;
+  line-height: 40px;
+  margin-bottom: 15px;
+}
+.dialog-content .login-container p.clearfix {
+  margin-bottom: 30px;
+}
+.dialog-content .login-container a {
+  font-size: 14px;
+  color: #00a5ed;
+  line-height: 40px;
+}
+.dialog-content .login-container a:hover {
+  color: #178ec8;
+}
+.dialog-content .login-container .yw-btn {
+  height: 50px;
+  line-height: 50px;
+}
+.dialog-content .login-container .yiban-login {
+  line-height: 80px;
+}
+.dialog-content .login-container .yiban-login .line {
+  width: 65px;
+  height: 1px;
+  background-color: #888;
+  display: inline-block;
+}
+.dialog-content .login-container .yiban-login .label {
+  color: #888888;
+  display: inline-block;
+  font-size: 14px;
+  vertical-align: middle;
+  margin: 2px 10px 0 10px;
+  width: 90px;
+  line-height: 24px;
+}
+.dialog-content .login-container .yiban-login a {
+  width: 60px;
+  line-height: 24px;
+  display: inline-block;
+  vertical-align: middle;
+  margin: 2px 10px 0 13px;
+}
+
+.yiban-footer {
+  margin-top: 23px;
+}
+
+.yiban-footer .container {
+  margin: 0 auto;
+  position: relative;
+  padding: 15px 0 30px;
+  text-align: center;
+  width: 960px;
+  border-top: 1px solid #eaeaea;
+}
+
+@media (min-width: 1366px) {
+  .yiban-footer .container {
+    width: 1240px;
+  }
+}
+.yiban-footer .container .about-yiban a {
+  font-size: 14px;
+  color: #033333;
+  padding: 8px;
+}
+
+.yiban-footer .container .about-yiban span {
+  color: #e8e8e8;
+}
+
+.yiban-footer .logo {
+  margin-left: -15px;
+}
+
+.yiban-footer .logo a {
+  background-color: transparent;
+  background-position: 0 0;
+}
+
+.yiban-footer .copyright {
+  margin-left: 10px;
+  letter-spacing: 1px;
+  margin-top: 6px;
+  margin-bottom: 6px;
+  color: #324f68;
+  font-size: 13px;
+}
+
+.yiban-footer .container .yiban-illegal {
+  margin-top: 9px;
+}
+
+.yiban-footer .container .yiban-illegal a {
+  margin-right: 33px;
+}
+
+.about-yiban {
+  margin: 6px 0 6px;
+  font-size: 12px;
+}
+
+.about-yiban li {
+  float: left;
+  width: 72px;
+  text-align: center;
+}
+
+.yiban-footer .container .about-yiban a:hover {
+  color: #178ec8;
+}
+
+.yiban-brand {
+  margin: 15px auto;
+}
+
+.yiban-brand a {
+  margin-left: 7px;
+  filter: alpha(opacity=90);
+  opacity: 0.9;
+}
+
+.yiban-brand a:hover {
+  filter: alpha(opacity=100);
+  opacity: 1;
+  border-color: #03a9f4;
+  transition: all .2s ease;
+}
+
+.icon {
+  display: inline-block;
+  vertical-align: middle;
+  background-repeat: no-repeat;
+  transition: all 0.2s ease;
+}
+
+.brand-boya, .brand-k, .brand-yiban, .brand-zz, .brand-youke {
+  background-image: url("/open/img/main/2016/brand_new.png");
+  width: 112px;
+  height: 40px;
+  border: 1px solid #ddd;
+}
+
+.brand-boya {
+  background-position: 0 -161px;
+}
+
+.brand-k {
+  background-position: 2px -112px;
+}
+
+.brand-zz {
+  background-position: 0 -214px;
+}
+
+.brand-yiban {
+  background-position: 2px -58px;
+}
+
+.brand-youke {
+  background-position: 2px -6px;
+}
+
+/*.yiban-footer { margin-top: 23px; border-top: 2px solid #e5e7ea; }*/
+/*.yiban-footer .container { position: relative; padding: 15px 0; }*/
+/*.yiban-footer .logo { margin-left: -15px; }*/
+/*.yiban-footer .logo a { background-color: transparent; background-position: 0 0; }*/
+/*.yiban-footer .copyright { margin-left: 10px; font-size: 10px; letter-spacing: 1px; color: #517290; }*/
+/*.about-yiban { margin: 12px 0 6px; font-size: 12px; }*/
+/*.about-yiban li { float: left; width: 72px; text-align: center; }*/
+/*.yiban-brand { margin-top: 15px; }*/
+/*.yiban-brand a { margin-left: 2px; filter: alpha(opacity=50); opacity: 0.5; }*/
+/*.yiban-brand a:hover { filter: alpha(opacity=100); opacity: 1; }*/
+/*.icon { display: inline-block; vertical-align: middle; background-repeat: no-repeat; -webkit-transition: all 0.2s ease; transition: all 0.2s ease; }*/
+/*.brand-boya, .brand-k, .brand-yiban, .brand-zz { background-image: url("/appstore/img/main/brand.png"); width: 80px; height: 28px; }*/
+/*.brand-boya { background-position: 0 0; }*/
+/*.brand-k { background-position: 0 -28px; }*/
+/*.brand-zz { background-position: 0 -84px; }*/
+/*.brand-yiban { background-position: 0 -112px; }*/
+.yiban-leagl {
+  margin: 0 auto;
+}
+
+.copyright-txt1 {
+  margin-top: 6px;
+  margin-bottom: 6px;
+  color: #324f68 !important;
+  font-size: 13px !important;
+}
+
+.copyright-txt2 {
+  margin-top: 6px;
+  color: #324f68 !important;
+  font-size: 13px !important;
+}
