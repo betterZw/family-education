@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
-  <display-name>17_familyEducation</display-name>
+  <display-name>family-education</display-name>
   <servlet>
     <description>This is the description of my J2EE component</description>
     <display-name>This is the display name of my J2EE component</display-name>
@@ -19,6 +19,18 @@
     <servlet-name>UserRegisterServlet</servlet-name>
     <servlet-class>com.it.servlet.qt.UserRegisterServlet</servlet-class>
   </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>FindAllTeacherServlet</servlet-name>
+    <servlet-class>com.it.servlet.teacher.FindAllTeacherServlet</servlet-class>
+  </servlet>
+<servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>FindTeachersByGradeAndSubjectServlet</servlet-name>
+    <servlet-class>com.it.servlet.teacher.FindTeachersByGradeAndSubjectServlet</servlet-class>
+  </servlet>
 
 
 
@@ -33,6 +45,14 @@
   <servlet-mapping>
     <servlet-name>UserRegisterServlet</servlet-name>
     <url-pattern>/UserRegisterServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>FindTeachersByGradeAndSubjectServlet</servlet-name>
+    <url-pattern>/FindTeachersByGradeAndSubjectServlet</url-pattern>
+  </servlet-mapping>
+   <servlet-mapping>
+    <servlet-name>FindAllTeacherServlet</servlet-name>
+    <url-pattern>/FindAllTeacherServlet</url-pattern>
   </servlet-mapping>
   <welcome-file-list>
     <welcome-file>index.html</welcome-file>

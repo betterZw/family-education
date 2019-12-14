@@ -1106,6 +1106,7 @@ textarea{
 	border: 1px solid #50c645;
 	width: 1140px;
 	top: 100%;
+	margin-left:30px;
 	left: 0;
 	z-index: 2;
 	background: #fff;

@@ -1,23 +1,25 @@
-<!DOCTYPE html>
-<!-- saved from url=(0033)https://open.yiban.cn/global/user -->
+<%@ page language="java" contentType="text/html; charset=utf-8"%>
 <html lang="en">
-
 <head>
+ 
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="initial-scale=1, maximum-scale=3, minimum-scale=1, user-scalable=no">
     <meta name="description" content="易班开放平台">
-    <meta name="keywords" content="易班开放平台">
+    <meta name="keywords" content="易班开放平台"> 
     <link rel="shortcut icon" type="image/ico" href="https://open.yiban.cn/open/img/main/yb.ico">
     <title>个人主页 - 石大微教</title>
-    <link rel="stylesheet" type="text/css" href="./individual_center_files/yibanWidget.min.css">
+   <link rel="stylesheet" type="text/css" href="./individual_center_files/yibanWidget.min.css">
     <link rel="stylesheet" type="text/css" href="./individual_center_files/base.css">
-    <link rel="stylesheet" type="text/css" href="./individual_center_files/ieCheck.css">
+     <link rel="stylesheet" type="text/css" href="./individual_center_files/ieCheck.css">
     <link rel="stylesheet" type="text/css" href="./individual_center_files/app.css">
-    <script type="text/javascript" src="./individual_center_files/sslcheck.js"></script>
+    <!-- <script type="text/javascript" src="./individual_center_files/sslcheck.js"></script> -->
+    
 </head>
+  <body class="app-body" data-item="choose_s_dev">
 
-<body class="app-body" data-item="choose_s_dev">
+
+ <!--
     <!-- <section class="nav">
         <nav class="open-nav yw-container">
             <ul>
@@ -269,7 +271,7 @@
     <script type="text/javascript" src="./individual_center_files/yibanWidget.js"></script>
     <script type="text/javascript" src="./individual_center_files/ieCheck.js"></script>
     <script type="text/javascript" src="./individual_center_files/reg.js"></script>
-    <script type="text/javascript" src="./individual_center_files/user.js"></script>
+    <script type="text/javascript" src="./individual_center_files/user.js"></script> --%>
 </body>
 
 </html>

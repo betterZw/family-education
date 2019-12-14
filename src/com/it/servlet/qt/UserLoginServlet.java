@@ -36,7 +36,7 @@ public class UserLoginServlet extends HttpServlet {
 			
 			if(student != null){
 				session.setAttribute("student", student);
-				path = "/main_page.html";
+				path = "/FindAllTeacherServlet";
 			}
 			
 		}else if("¿œ ¶".equals(option)){
@@ -46,7 +46,7 @@ public class UserLoginServlet extends HttpServlet {
 			
 			if(teacher != null){
 				session.setAttribute("teacher", teacher);
-				path = "/main_page.html";
+				path = "/FindAllTeacherServlet";
 			}
 			
 			

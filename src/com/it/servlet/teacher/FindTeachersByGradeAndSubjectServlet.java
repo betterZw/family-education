@@ -13,7 +13,7 @@ import com.it.dao.ITeacherDAO;
 import com.it.dao.impl.TeacherDAOImpl;
 import com.it.entity.Teacher;
 
-public class FindAllTeachersServlet extends HttpServlet {
+public class FindTeachersByGradeAndSubjectServlet extends HttpServlet {
 
 	
 	public void doGet(HttpServletRequest request, HttpServletResponse response)
@@ -26,7 +26,7 @@ public class FindAllTeachersServlet extends HttpServlet {
 		ITeacherDAO teacherDAO = new TeacherDAOImpl();
 		List<Teacher> teachers = teacherDAO.findByGradeAndSubject(grade, subject);
 		request.setAttribute("teachers", teachers);
-		request.getRequestDispatcher("/teachersList.jsp").forward(request, response);
+		request.getRequestDispatcher("/mainPage.jsp").forward(request, response);
 		
 	}
 

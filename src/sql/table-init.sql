@@ -157,6 +157,13 @@ where s_userName = '' and s_passWord = ''
 
 select t_id,t_userName,t_passWord,t_sex,t_subject,t_grade from teacher
 wherer t_userName = '' and t_passWord = ''
+select a_id,a_userName,a_passWord,a_type  from SysAdmin
+
+select com_id,com_from,com_to,com_context,com_isHandler from complaint
+-------------------------------------------------------
+update Teacher set t_userName = '', t_passWord = '',t_sex = ,t_subject = '',t_grade =''
+
+update Student set s_userName = '',s_passWord = '',s_sex = ,s_grade = '',s_subject = '',s_address = '',s_mobile = ''
 
 
 
