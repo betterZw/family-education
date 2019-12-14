@@ -64,10 +64,10 @@
 				</div>
 				
 			</div>
-			<div class="form-group">
+			<!-- <div class="form-group">
 				<label class="yw-label">姓名</label> <input class="yw-input"
 					disabled="disabled" type="text" value="赵薇">
-			</div>
+			</div> -->
 			<!--
             <div class="form-group">
                 <label class="yw-label">身份证号码</label>
@@ -75,24 +75,25 @@
             </div>
             -->
 			<div class="form-group">
-				<label class="yw-label">学号 / 工号</label> <input class="yw-input"
-					disabled="disabled" type="text" value="23432">
+				<label class="yw-label">学号 / 工号</label> 
+				<input class="yw-input"
+					disabled="disabled" type="text" name ="id" value="23432">
 			</div>
 			<div class="form-group">
 				<label class="yw-label">用户名</label> <input class="yw-input"
-					type="text" value="赵微老师">
+					type="text" name="userName" value="赵微老师">
 			</div>
 			<div class="form-group">
 				<label class="yw-label">密码</label> <input class="yw-input"
-					type="password">
+					name ="pwd" type="password">
 			</div>
 			<div class="form-group">
 				<label class="yw-label">年级</label> <input class="yw-input"
-					type="text" value="高中"">
+					type="text" name="grade" value="高中"">
 			</div>
 			<div class=" form-group">
 				<label class="yw-label">科目</label> <input class="yw-input"
-					type="text" value="英语">
+					type="text" name="subject" value="英语">
 			</div>
 
 			<div class="form-group">
