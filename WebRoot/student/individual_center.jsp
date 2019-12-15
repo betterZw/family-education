@@ -1,4 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=utf-8"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html lang="en">
 <head>
 
@@ -29,24 +30,26 @@
 	<section class="yw-container">
 		<article class="createApp">
 			<div class="title">
-				<a href="https://open.yiban.cn/">首页</a> &gt; 个人中心
+				<a href="${pageContext.request.contextPath }/FindAllTeacherServlet">首页</a> &gt; 个人中心
 			</div>
 		</article>
-		<form class="app-modify user-info">
+		<form class="app-modify user-info" action="${pageContext.request.contextPath }/UpdateStudentServlet"
+		method="post">
 			<div class="validate-label">
 				<div class="line"></div>
 				<span>联系方式</span>
 				<div class="line"></div>
 			</div>
-			<div class="form-group">
-				<label class="yw-label">地址</label> <input class="yw-input email"
-					type="text" name="address" id="change_email" value=""
+			
+			<div class="form-group" method= "post">
+				<label class="yw-label">地址</label> <input class="yw-input"
+					type="text" name="address" id="change_email" value="${requestScope.student.s_address }"
 					placeholder="请填写常用补课地址">
 			</div>
 			<div class="form-group">
 				<label class="yw-label">手机号码</label> <input
 					class="yw-input cellphone" type="text" name="phone"
-					id="change_phone" value="18700575796" placeholder="请填写常用联系手机号码">
+					id="change_phone" value="${requestScope.student.s_mobile }" placeholder="请填写常用联系手机号码">
 			</div>
 
 			<div class="validate-label">
@@ -58,49 +61,51 @@
 			
 				<div class="form-group">
 				<label class="yw-label">姓别</label> &nbsp;&nbsp;
-				<input type="radio" name="reg_type" value="1" checked>&nbsp;男&nbsp;&nbsp;
-				<input type="radio" name="reg_type" value="0">&nbsp;女
+				<input type="radio" name="reg_type" value="1" 
+			
+	  		<c:if test="${requestScope.student.s_sex}" var="ok">
+	  			checked
+	  		</c:if>
+	  		>&nbsp;男&nbsp;&nbsp;
+				<input type="radio" name="reg_type" value="0"
+				<c:if test="${!ok }">
+	  			checked
+	  		</c:if>
+				>&nbsp;女
 						
 				</div>
 				
 			</div>
-			<!-- <div class="form-group">
-				<label class="yw-label">姓名</label> <input class="yw-input"
-					disabled="disabled" type="text" value="赵薇">
-			</div> -->
-			<!--
-            <div class="form-group">
-                <label class="yw-label">身份证号码</label>
-                <input class="yw-input" disabled="disabled" type="text" value=""/>
-            </div>
-            -->
+			
 			<div class="form-group">
 				<label class="yw-label">学号 / 工号</label> 
 				<input class="yw-input"
-					disabled="disabled" type="text" name ="id" value="23432">
+					readonly type="text" name ="id" value="${requestScope.student.s_id }">
 			</div>
 			<div class="form-group">
 				<label class="yw-label">用户名</label> <input class="yw-input"
-					type="text" name="userName" value="赵微老师">
+					type="text" name="userName" value="${requestScope.student.s_userName }">
 			</div>
 			<div class="form-group">
 				<label class="yw-label">密码</label> <input class="yw-input"
-					name ="pwd" type="password">
+					name ="pwd" type="password" value="${requestScope.student.s_passWord }">
 			</div>
 			<div class="form-group">
 				<label class="yw-label">年级</label> <input class="yw-input"
-					type="text" name="grade" value="高中"">
+					type="text" name="grade" value="${requestScope.student.s_grade }"">
 			</div>
 			<div class=" form-group">
 				<label class="yw-label">科目</label> <input class="yw-input"
-					type="text" name="subject" value="英语">
+					type="text" name="subject" value="${requestScope.student.s_subject }">
 			</div>
+			
+			<input type="submit" class="yw-btn bright-blue btn-save" value="保存设置">
 
-			<div class="form-group">
-				<a
-					href="${pageContext.request.contextPath }/UpdateInformationServlet"><div
-						class="yw-btn bright-blue btn-save updusercall">保存设置</div></a>
-			</div>
+			<!-- <div class="yw-btn bright-blue btn-save updusercall">
+						</div> 
+					<div class="yw-btn bright-blue btn-save updusercall">
+					<input type="submit" class="yw-btn bright-blue btn-save updusercall" value="保存设置"> </a>
+ -->
 			<!--
             <div class="form-group">
                 <label class="yw-label"></label>

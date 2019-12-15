@@ -175,7 +175,7 @@
 								src="./main_page/hot.png" alt=""></i></a></li>
 					<li class=""><a href="http://www.jiajiao114.com/xuqiu.php">快速请家教</a></li>
 					<li class=""><a href="http://www.jiajiao114.com/xueyuan/">文件共享</a></li>
-					<li class=""><a href="${pageContext.request.contextPath }/UpdateStudentServlet?id=">个人中心</a></li>
+					<li class=""><a href="${pageContext.request.contextPath }/FindByStudentIdServlet?id=${sessionScope.student.s_id}">个人中心</a></li>
 					<li class=""><a
 						href="http://www.jiajiao114.com/help/jiajiao_fee.php">投诉</a></li>
 					<div class="clear"></div>

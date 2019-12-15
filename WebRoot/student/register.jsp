@@ -1,11 +1,23 @@
-<!DOCTYPE html>
-<!-- saved from url=(0077)https://account.cnblogs.com/signup?returnUrl=https%3A%2F%2Fwww.cnblogs.com%2F -->
-<html lang="zh">
+<%@ page language="java" contentType="text/html; charset=utf-8"%>
+<%
+String path = request.getContextPath();
+String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
+%>
 
-<head>
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=EDGE">
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <base href="<%=basePath%>">
+    
+    
+    
+	<meta http-equiv="pragma" content="no-cache">
+	<meta http-equiv="cache-control" content="no-cache">
+	<meta http-equiv="expires" content="0">    
+	<meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
+	<meta http-equiv="description" content="This is my page">
+	
+
 	<title>用户注册 - 石大微教</title>
 	<link rel="shortcut icon" href="https://common.cnblogs.com/favicon.ico" type="image/x-icon">
 	<script src="./register_files/nav-iconfont.js.下载"></script>
@@ -22,9 +34,10 @@
 	<script charset="UTF-8" async="" src="./register_files/send"></script>
 	<script charset="UTF-8" src="./register_files/get.php"></script>
 	<link href="https://static.geetest.com/static/wind/style_https.1.5.6.css" rel="stylesheet">
-</head>
 
-<body>
+  </head>
+  
+  <body>
 	<svg aria-hidden="true" style="position: absolute; width: 0px; height: 0px; overflow: hidden;">
 		<symbol id="icon-logout" viewBox="0 0 1024 1024">
 			<path

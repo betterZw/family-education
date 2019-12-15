@@ -32,7 +32,7 @@ public class StudentDAOImpl implements IStudentDAO{
 		}
 		String sql = "update Student set s_userName = '"+student.getS_userName()+"',s_passWord = '"+student.getS_passWord()+""
 				+ "',s_sex ="+sex+" ,s_grade = '"+student.getS_grade()+"',s_subject = '"+student.getS_subject()+"',"
-						+ "s_address = '"+student.getS_address()+"',s_mobile = '"+student.getS_mobile()+"'";
+						+ "s_address = '"+student.getS_address()+"',s_mobile = '"+student.getS_mobile()+"' where s_id = "+student.getS_id()+"";
 		DBMananger dbMananger = new DBMananger();
 		
 		return (dbMananger.update(sql) == 1);
@@ -48,7 +48,9 @@ public class StudentDAOImpl implements IStudentDAO{
 	@Override
 	public Student findById(int id) {
 		Student student = null;
-		String sql = "select s_id, s_userName,s_passWord,s_sex,s_grade,s_subject s_address,s_mobile from student where s_id = "+id+"";
+		String sql = "select s_id, s_userName,s_passWord,s_sex,s_grade,s_subject, s_address,s_mobile"
+				+ "  from student where s_id = "+id+"";
+
 		DBMananger dbMananger = new DBMananger();
 		ResultSet rs = dbMananger.query(sql);
 		try {
@@ -62,7 +64,6 @@ public class StudentDAOImpl implements IStudentDAO{
 				String s_address = rs.getString(7);
 				String s_mobile = rs.getString(8);
 				student = new Student(s_id, s_userName, s_passWord, s_sex, s_grade, s_subject, s_address, s_mobile);
-				
 			}
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block

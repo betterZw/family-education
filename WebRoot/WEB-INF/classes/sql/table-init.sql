@@ -166,7 +166,7 @@ update Teacher set t_userName = '', t_passWord = '',t_sex = ,t_subject = '',t_gr
 update Student set s_userName = '',s_passWord = '',s_sex = ,s_grade = '',s_subject = '',s_address = '',s_mobile = ''
 
 
-
+select * from student
 
 
 
