@@ -24,11 +24,62 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	<link rel="stylesheet" href="./register_files/commons.bundle.css">
 	<link rel="stylesheet" href="./register_files/_layout.css">
 	<link rel="stylesheet" href="./register_files/signup.css">
-	<script>
-		window.captcha = {
-			captchaType: 'Geetest'
-		};
+ 	<script type="text/javascript">
+		
+		function checkUserName(name){
+			var userName = name;
+			
+			var result = document.getElementById("result");
+			if(userName.trim().length == 0){
+				result.innerHTML = "用户名不能为空！";
+				name.focus();
+			}else{
+				result.innerHTML = "";
+			}
+			
+		}
+		
+		function checkPassWord(pwd){
+			var password = pwd;
+			
+			var result = document.getElementById("password");
+			if(password.trim().length == 0){
+				result.innerHTML = "密码不能为空！";
+				pwd.focus();
+			}else{
+				result.innerHTML = "";
+			}
+			
+		}
+		function checkConfirm(cpwd){
+			var cpassword = cpwd;
+			
+			var result = document.getElementById("confirm");
+			if(cpassword.trim().length == 0){
+				result.innerHTML = "确定密码不能为空！";
+				cpwd.focus();
+			}else{
+				result.innerHTML = "";
+			}
+			
+		}
+		function checkPwd(){
+			$pwd = document.getElementById("Password").value;
+			$confirm = document.getElementById("ConfirmPassword").value;
+			if($pwd != $confirm){
+				alert("两次密码不一致！");
+				document.getElementById("submitBtn").disabled=true;
+				location.href="<%=request.getContextPath()%>/register.jsp";
+			}else{
+				
+				document.getElementById("submitBtn").disabled=false;
+				location.href="<%=request.getContextPath()%>/frontLogin.jsp";
+			}
+		}
+		
+	
 	</script>
+	 
 	<script charset="UTF-8" async="" src="./register_files/gettype.php"></script>
 	<script charset="UTF-8" async="" src="./register_files/fullpage.0.0.0.js.下载"></script>
 	<script charset="UTF-8" async="" src="./register_files/send"></script>
@@ -57,17 +108,10 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 							<label for="LoginName">登录用户名</label>
 						</div>
 						<div class="col has-feedback">
-							<input class="form-control" placeholder="不少于4个字符" type="text" name="LoginName">
+							<input class="form-control" placeholder="不少于4个字符" type="text" name="LoginName" 
+							id = "LoginName" onblur="checkUserName(this.value);">
+							<span id = "result" style = "color:red"></span>
 							
-							<!-- <input class="form-control" placeholder="不少于4个字符" type="text" data-val="true"
-								data-val-length="长度要求 4-30 个字符 (2-15 个中文)" data-val-length-max="30"
-								data-val-length-min="2" data-val-nospace="登录用户名不能包含空格"
-								data-val-remote="&#39;登录用户名&#39; is invalid."
-								data-val-remote-additionalfields="*.LoginName,*.Email" data-val-remote-type="Post"
-								data-val-remote-url="/checkloginname" data-val-required="请输入登录用户名" id="LoginName"
-								name="LoginName">
-							<span class="invalid-feedback field-validation-valid" data-valmsg-for="LoginName"
-								data-valmsg-replace="true"></span> -->
 						</div>
 					</div>
 
@@ -83,36 +127,20 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 							</select>
 						</div>
 					</div>
-					<!-- <div class="form-group form-row">
-						<div class="col-sm-2 control-label w5-4">
-							<label for="DisplayName">显示昵称</label>
-						</div>
-						<div class="col has-feedback">
-							<input class="form-control" placeholder="不少于2个字符" type="text" data-val="true"
-								data-val-length="长度要求 2-20 个字符 (1-10 个中文)" data-val-length-max="20"
-								data-val-length-min="1" data-val-regex="不能包含空格、@、:和，不能以._结尾"
-								data-val-regex-pattern="^(?!.*[@:：\s]).*[^._]$"
-								data-val-remote="&#39;显示昵称&#39; is invalid."
-								data-val-remote-additionalfields="*.DisplayName" data-val-remote-type="Post"
-								data-val-remote-url="/checkdisplayname" data-val-required="请输入显示昵称" id="DisplayName"
-								name="DisplayName">
-							<span class="invalid-feedback field-validation-valid" data-valmsg-for="DisplayName"
-								data-valmsg-replace="true"></span>
-						</div>
-					</div> -->
+					
 					<div class="form-group form-row">
 						<div class="col-sm-2 control-label w5-2">
 							<label for="Password">密码</label>
 						</div>
 						<div class="col has-feedback">
 							<input class="form-control" placeholder="至少8位，并包含字母、数字和特殊字符中的两种" type="password"
+							onblur="checkPassWord(this.value);"
 								data-val="true" data-val-length="密码长度要求 8-50 位" data-val-length-max="50"
 								data-val-length-min="8" data-val-nospace="密码不能包含空格" data-val-regex="密码不能包含全角字符或中文"
 								data-val-regex-pattern="^((?![^\x00-\xff]).)*$" data-val-required="请输入密码"
 								data-val-user-password="至少包含字母、数字和特殊字符中的两种，只允许半角符号" id="Password" name="Password"
 								data-toggle="tooltip" data-placement="bottom" title="" data-original-title="大写锁定已打开">
-							<span class="invalid-feedback field-validation-valid" data-valmsg-for="Password"
-								data-valmsg-replace="true"></span>
+							<span id = "password" style = "color:red"></span>
 						</div>
 					</div>
 					<div class="form-group form-row">
@@ -120,12 +148,12 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 							<label for="ConfirmPassword">确认密码</label>
 						</div>
 						<div class="col has-feedback">
-							<input class="form-control" placeholder="请输入确认密码" type="password" data-val="true"
+							<input class="form-control" placeholder="请输入确认密码" type="password" data-val="true" 
+							onblur="checkConfirm(this.value);"
 								data-val-equalto="确认密码与密码输入不一致" data-val-equalto-other="*.Password" id="ConfirmPassword"
 								name="ConfirmPassword" data-toggle="tooltip" data-placement="bottom" title=""
 								data-original-title="大写锁定已打开">
-							<span class="invalid-feedback field-validation-valid" data-valmsg-for="ConfirmPassword"
-								data-valmsg-replace="true"></span>
+							<span id = "confirm" style = "color:red"></span>
 						</div>
 					</div>
 					<div class="form-group form-row">
@@ -134,7 +162,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 								style="display: inline;">网络错误，极验验证码加载失败，请刷新页面重试，若持续错误请尝试更换浏览器或网络。联系邮箱:
 								contact@cnblogs.com
 							</span> -->
-							<button id="submitBtn" type="submit"
+							<button id="submitBtn" type="submit" onclick="javascript:checkPwd();"
 								class="btn ladda-button mx-auto d-block cnblogs-btn-blue" data-style="zoom-in">
 								<span class="ladda-label">注册</span> <span class="ladda-spinner"></span>
 							</button>
