@@ -30,11 +30,24 @@ public class UserRegisterServlet extends HttpServlet {
 			throws ServletException, IOException {
 
 		request.setCharacterEncoding("utf-8");
-		String name = request.getParameter("name");
-		String pwd = request.getParameter("pwd");
 		String option = request.getParameter("selector");//获取下拉框选项
-		HttpSession session = request.getSession();
-		String path = "/frontLogin.jsp";
+		String name = request.getParameter("LoginName");
+		String pwd = request.getParameter("Password");
+		
+		if("学生".equals(option)){
+			Student student = new Student(name, pwd);
+			IStudentDAO studentDAO = new StudentDAOImpl();
+			boolean isOk = studentDAO.save(student);
+			PrintWriter out = response.getWriter();
+			out.print(isOk);
+		}
+		if("老师".equals(option)){
+			Teacher teacher = new Teacher(name, pwd);
+			ITeacherDAO teacherDAO = new TeacherDAOImpl();
+			boolean isOk = teacherDAO.save(teacher);
+			PrintWriter out = response.getWriter();
+			out.print(isOk);
+		}
 		
 	
 	}

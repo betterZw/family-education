@@ -37,6 +37,13 @@ public class Student {
 		this.s_address = s_address;
 		this.s_mobile = s_mobile;
 	}
+	
+	
+	public Student( String s_userName, String s_passWord) {
+		super();
+		this.s_userName = s_userName;
+		this.s_passWord = s_passWord;
+	}
 	public int getS_id() {
 		return s_id;
 	}

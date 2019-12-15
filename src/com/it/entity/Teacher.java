@@ -22,6 +22,12 @@ public class Teacher {
 		this.t_subject = t_subject;
 		this.t_grade = t_grade;
 	}
+	
+	public Teacher(String t_userName, String t_passWord) {
+		super();
+		this.t_userName = t_userName;
+		this.t_passWord = t_passWord;
+	}
 
 	public Teacher(String t_userName, String t_passWord, boolean t_sex,
 			String t_subject, String t_grade) {
