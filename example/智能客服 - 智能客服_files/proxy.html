@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<!-- saved from url=(0041)https://iaas.cloud.tencent.com/proxy.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  
+  <script>
+    var BASEHOST = location.hostname === 'iaas.cloud.tencent.com' ? 'cloud.tencent.com' : 'qcloud.com'
+    document.domain = BASEHOST
+
+    function getCookie (name) {
+        var r = new RegExp("(?:^|;+|\\s+)" + name + "=([^;]*)"),
+            m = document.cookie.match(r);
+
+        return !m ? "" : m[1];
+    }
+
+    //简易 guid
+    function guid() {
+      function s4() {
+        return Math.floor((1 + Math.random()) * 0x10000)
+          .toString(16)
+          .substring(1);
+      }
+      return s4() + s4() + '-' + s4() + '-' + s4() + '-' +
+        s4() + '-' + s4() + s4() + s4();
+    }
+
+    var getACSRFToken = function (skey) {
+      if(!skey){ return ''}
+      var hash = 5381
+      for (var i = 0, len = skey.length; i < len; ++i) { hash += (hash << 5) + skey.charCodeAt(i) }
+      return hash & 0x7fffffff
+    }
+
+    /**
+     *  iaas.qcloud.com cgi 请求代理方法
+     */
+    window.postSend = function (url, data, opts) {
+      var Promise = window.Promise || parent.Promise
+      var $ = parent.$
+      opts = opts || {}
+
+      return Promise.resolve($.ajax($.extend({
+        type: 'post',
+        xhr: function () {
+          try { return new window.XMLHttpRequest(); } catch (e) {}
+        },
+        url: url,
+        headers: {
+          "X-SeqId": guid(),
+          "X-Referer": parent.location.href,
+          "X-CsrfCode": getACSRFToken(getCookie('skey') || getCookie('p_skey')),
+          "x-lid": opts.lid,
+          "x-life": opts.life
+        },
+        data: opts.isFormData ? data : JSON.stringify(data),
+        dataType: 'json',
+        processData: !opts.isFormData,
+        contentType: opts.isFormData ? false : 'application/json; charset=utf-8'
+      }, opts)))
+    }
+  </script>
+</head>
+<body>
+</body></html>
