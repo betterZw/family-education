@@ -40,7 +40,8 @@ public class TeacherDAOImpl implements ITeacherDAO{
 		}
 		String sql = "update Teacher set t_userName = '"+teacher.getT_userName()+"',"
 				+ " t_passWord = '"+teacher.getT_passWord()+"',t_sex ="+sex+" ,"
-						+ "t_subject = '"+teacher.getT_subject()+"',t_grade ='"+teacher.getT_grade()+"'";
+						+ "t_subject = '"+teacher.getT_subject()+"',t_grade ='"+teacher.getT_grade()+"'"
+								+ "where t_id = "+teacher.getT_id()+"";
 		DBMananger dbMananger = new DBMananger();
 		
 		return (dbMananger.update(sql) == 1);

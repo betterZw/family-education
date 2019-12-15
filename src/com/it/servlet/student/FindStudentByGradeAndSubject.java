@@ -13,22 +13,26 @@ import com.it.dao.IStudentDAO;
 import com.it.dao.impl.StudentDAOImpl;
 import com.it.entity.Student;
 
-public class FindAllStudentServlet extends HttpServlet {
+public class FindStudentByGradeAndSubject extends HttpServlet {
 
 	
 	public void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		this.doPost(request, response);
+		String grade1 = request.getParameter("grade");
+		String grade = new String(grade1.getBytes("iso-8859-1"),"utf-8"); 
+		String subject1 = request.getParameter("subject");
+		String subject = new String(subject1.getBytes("iso-8859-1"),"utf-8");
+		IStudentDAO studentDAO = new StudentDAOImpl();
 		
+		List<Student> students = studentDAO.findByGradeAndSubject(grade, subject);
+		request.setAttribute("students", students);
+		request.getRequestDispatcher("teacher/mainPage.jsp").forward(request, response);
 	}
 
 	
 	public void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		IStudentDAO studentDAO = new StudentDAOImpl();
-		List<Student> students = studentDAO.findAll();
-		request.setAttribute("students", students);
-		request.getRequestDispatcher("teacher/mainPage.jsp").forward(request, response);
+		this.doGet(request, response);
 	}
 
 }

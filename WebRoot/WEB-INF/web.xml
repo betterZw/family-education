@@ -55,6 +55,27 @@
     <servlet-name>FindByStudentIdServlet</servlet-name>
     <servlet-class>com.it.servlet.student.FindByStudentIdServlet</servlet-class>
   </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>FindStudentByGradeAndSubject</servlet-name>
+    <servlet-class>com.it.servlet.student.FindStudentByGradeAndSubject</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>FindByTeacherIdServlet</servlet-name>
+    <servlet-class>com.it.servlet.teacher.FindByTeacherIdServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>UpdateTeacherServlet</servlet-name>
+    <servlet-class>com.it.servlet.teacher.UpdateTeacherServlet</servlet-class>
+  </servlet>
+
+
+
 
 
 
@@ -94,6 +115,18 @@
   <servlet-mapping>
     <servlet-name>FindByStudentIdServlet</servlet-name>
     <url-pattern>/FindByStudentIdServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>FindStudentByGradeAndSubject</servlet-name>
+    <url-pattern>/FindStudentByGradeAndSubject</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>FindByTeacherIdServlet</servlet-name>
+    <url-pattern>/FindByTeacherIdServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>UpdateTeacherServlet</servlet-name>
+    <url-pattern>/UpdateTeacherServlet</url-pattern>
   </servlet-mapping>
   <welcome-file-list>
     <welcome-file>index.html</welcome-file>

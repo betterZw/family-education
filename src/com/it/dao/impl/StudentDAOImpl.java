@@ -79,7 +79,7 @@ public class StudentDAOImpl implements IStudentDAO{
 		List<Student> students = new ArrayList<Student>();
 		Student student = null;
 		
-		String sql = "select s_id, s_userName,s_passWord,s_sex,s_grade,s_subject s_address,s_mobile from student";
+		String sql = "select s_id, s_userName,s_passWord,s_sex,s_grade,s_subject, s_address,s_mobile from student";
 		DBMananger dbMananger = new DBMananger();
 		ResultSet rs = dbMananger.query(sql);
 		try {
@@ -133,6 +133,38 @@ public class StudentDAOImpl implements IStudentDAO{
 			e.printStackTrace();
 		}
 		return student;
+	}
+
+	@Override
+	public List<Student> findByGradeAndSubject(String grade, String subject) {
+		List<Student> students = new ArrayList<Student>();
+		Student student = null;
+		
+		String sql = "select s_id, s_userName,s_passWord,s_sex,s_grade,s_subject ,s_address,s_mobile"
+				+ " from student where s_grade = '"+grade+"' and s_subject = '"+subject+"'";
+		DBMananger dbMananger = new DBMananger();
+		ResultSet rs = dbMananger.query(sql);
+		try {
+			while(rs.next()){
+				int s_id = rs.getInt(1);
+				String s_userName = rs.getString(2);
+				String s_passWord = rs.getString(3);
+				boolean s_sex = rs.getBoolean(4);
+				String s_grade = rs.getString(5);
+				String s_subject = rs.getString(6);
+				String s_address = rs.getString(7);
+				String s_mobile = rs.getString(8);
+				student = new Student(s_id, s_userName, s_passWord, s_sex, s_grade, s_subject, s_address, s_mobile);
+				
+				students.add(student);
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}finally{
+			dbMananger.close();
+		}
+		return students;
 	}
 
 }

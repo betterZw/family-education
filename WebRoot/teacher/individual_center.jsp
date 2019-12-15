@@ -30,27 +30,27 @@
 	<section class="yw-container">
 		<article class="createApp">
 			<div class="title">
-				<a href="${pageContext.request.contextPath }/FindAllTeacherServlet">首页</a> &gt; 个人中心
+				<a href="${pageContext.request.contextPath }/FindAllStudentServlet">首页</a> &gt; 个人中心
 			</div>
 		</article>
-		<form class="app-modify user-info" action="${pageContext.request.contextPath }/UpdateStudentServlet"
+		<form class="app-modify user-info" action="${pageContext.request.contextPath }/UpdateTeacherServlet"
 		method="post">
-			<div class="validate-label">
+			<!-- <div class="validate-label">
 				<div class="line"></div>
 				<span>联系方式</span>
 				<div class="line"></div>
-			</div>
+			</div> -->
 			
-			<div class="form-group" method= "post">
+			<%-- <div class="form-group" method= "post">
 				<label class="yw-label">地址</label> <input class="yw-input"
-					type="text" name="address" id="change_email" value="${requestScope.student.s_address }"
+					type="text" name="address" id="change_email" value="${requestScope.teacher.s_address }"
 					placeholder="请填写常用补课地址">
-			</div>
-			<div class="form-group">
+			</div> --%>
+			<%-- <div class="form-group">
 				<label class="yw-label">手机号码</label> <input
 					class="yw-input cellphone" type="text" name="phone"
-					id="change_phone" value="${requestScope.student.s_mobile }" placeholder="请填写常用联系手机号码">
-			</div>
+					id="change_phone" value="${requestScope.teacher.s_mobile }" placeholder="请填写常用联系手机号码">
+			</div> --%>
 
 			<div class="validate-label">
 				<div class="line"></div>
@@ -63,7 +63,7 @@
 				<label class="yw-label">姓别</label> &nbsp;&nbsp;
 				<input type="radio" name="reg_type" value="1" 
 			
-	  		<c:if test="${requestScope.student.s_sex}" var="ok">
+	  		<c:if test="${requestScope.teacher.t_sex}" var="ok">
 	  			checked
 	  		</c:if>
 	  		>&nbsp;男&nbsp;&nbsp;
@@ -80,23 +80,23 @@
 			<div class="form-group">
 				<label class="yw-label">学号 / 工号</label> 
 				<input class="yw-input"
-					readonly type="text" name ="id" value="${requestScope.student.s_id }">
+					readonly type="text" name ="id" value="${requestScope.teacher.t_id }">
 			</div>
 			<div class="form-group">
 				<label class="yw-label">用户名</label> <input class="yw-input"
-					type="text" name="userName" value="${requestScope.student.s_userName }">
+					type="text" name="userName" value="${requestScope.teacher.t_userName }">
 			</div>
 			<div class="form-group">
 				<label class="yw-label">密码</label> <input class="yw-input"
-					name ="pwd" type="password" value="${requestScope.student.s_passWord }">
+					name ="pwd" type="password" value="${requestScope.teacher.t_passWord }">
 			</div>
 			<div class="form-group">
 				<label class="yw-label">年级</label> <input class="yw-input"
-					type="text" name="grade" value="${requestScope.student.s_grade }"">
+					type="text" name="grade" value="${requestScope.teacher.t_grade }"">
 			</div>
 			<div class=" form-group">
 				<label class="yw-label">科目</label> <input class="yw-input"
-					type="text" name="subject" value="${requestScope.student.s_subject }">
+					type="text" name="subject" value="${requestScope.teacher.t_subject }">
 			</div>
 			
 			<input type="submit" class="yw-btn bright-blue btn-save" value="保存设置">
