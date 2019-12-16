@@ -45,6 +45,7 @@ public class UserLoginServlet extends HttpServlet {
 			
 			
 			if(teacher != null){
+				session.setAttribute("t_id", teacher.getT_id());
 				session.setAttribute("teacher", teacher);
 				path = "/FindAllStudentServlet";
 			}

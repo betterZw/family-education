@@ -1,3 +1,5 @@
+<%@ page language="java" contentType="text/html; charset=utf-8"%>
+
 <!-- saved from url=(0068)https://downloads.openwrt.org/releases/17.01.0/targets/imx6/generic/ -->
 <html>
 

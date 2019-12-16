@@ -6,6 +6,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import com.it.dao.ITeacherDAO;
 import com.it.dao.impl.TeacherDAOImpl;
@@ -18,9 +19,12 @@ public class FindByTeacherIdServlet extends HttpServlet {
 			throws ServletException, IOException {
 		ITeacherDAO teacherDAO = new TeacherDAOImpl();
 		int id = Integer.parseInt(request.getParameter("id"));
-		
+		HttpSession session = request.getSession();
 		Teacher teacher = teacherDAO.findById(id);
-		request.setAttribute("teacher", teacher);
+		session.setAttribute("teacher", teacher);
+		System.out.println("*********************************");
+		System.out.println(teacher);
+		System.out.println("*********************************");
 		request.getRequestDispatcher("/teacher/individual_center.jsp").forward(request, response);
 		
 	}
