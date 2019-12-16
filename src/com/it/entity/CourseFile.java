@@ -10,6 +10,7 @@ public class CourseFile {
     private Date c_date;
 	private float c_size;
 	
+	
 	public CourseFile() {
 		super();
 	}

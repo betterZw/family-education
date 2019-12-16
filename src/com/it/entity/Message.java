@@ -86,7 +86,7 @@ public class Message {
 		if (m_from != other.m_from)
 			return false;
 		if (m_id != other.m_id)
-			return false;
+			return false; 
 		if (m_isReply != other.m_isReply)
 			return false;
 		if (m_to != other.m_to)
