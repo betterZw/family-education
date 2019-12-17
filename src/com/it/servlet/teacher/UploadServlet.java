@@ -48,9 +48,9 @@ public class UploadServlet extends HttpServlet {
         }
  
         // 配置上传参数
-        DiskFileItemFactory factory = new DiskFileItemFactory();
-        // 设置内存临界值 - 超过后将产生临时文件并存储于临时目录中
-        factory.setSizeThreshold(MEMORY_THRESHOLD);
+        DiskFileItemFactory factory = newMAX_REQUEST_SIZE DiskFileItemFactory();
+        // 设置内存临界值 - 超过后将产生MAX_REQUEST_SIZE临时文件并存储于临时目录中
+        factory.setSizeThreshold(MEMORY_TMAX_REQUEST_SIZEHRESHOLD);
         // 设置临时存储目录
         factory.setRepository(new File(System.getProperty("java.io.tmpdir")));
  
@@ -100,7 +100,7 @@ public class UploadServlet extends HttpServlet {
 
                         ICourseFileDAO courseFileDAO = new CourseFileDAOImpl();
                         CourseFile.this.c_date = new Date();
-                        CourseFile.this.c_isDisplay = ture;
+                        CourseFile.this.c_isDisplay = true;
                         CourseFile.this.c_name = fileName;
                         CourseFile.this.c_path = filePath;
                         CourseFile.this.c_size = item.getSize();
