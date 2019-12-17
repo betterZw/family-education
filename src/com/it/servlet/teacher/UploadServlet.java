@@ -1,15 +1,22 @@
-package com.it.servlet.qt;
+package com.it.servlet.teacher;
 
+import java.io.File;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.Date;
+<<<<<<< HEAD
+=======
+import java.util.List;
+>>>>>>> 89823d4536abb365f36fe151529be66c26d10125
 
 import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+<<<<<<< HEAD
 import com.it.dao.IStudentDAO;
 import com.it.dao.ITeacherDAO;
 import com.it.dao.impl.StudentDAOImpl;
@@ -17,6 +24,16 @@ import com.it.dao.impl.TeacherDAOImpl;
 import com.it.entity.Student;
 import com.it.entity.Teacher;
 import com.it.entity.CourseFile;
+=======
+import org.apache.commons.fileupload.FileItem;
+import org.apache.commons.fileupload.disk.DiskFileItemFactory;
+import org.apache.commons.fileupload.servlet.ServletFileUpload;
+
+import com.it.dao.ICourseFileDAO;
+import com.it.dao.impl.CourseFileDAOImpl;
+import com.it.entity.CourseFile;
+import com.it.entity.Teacher;
+>>>>>>> 89823d4536abb365f36fe151529be66c26d10125
 
 /**
  * Servlet implementation class UploadServlet
@@ -93,12 +110,18 @@ public class UploadServlet extends HttpServlet {
                         System.out.println(filePath);
                         // 保存文件到硬盘
                         item.write(storeFile);
+<<<<<<< HEAD
                         request.setAttribute("message",
                             "文件上传成功!");
+=======
+//                        request.setAttribute("message",
+//                          "文件上传成功!");
+>>>>>>> 89823d4536abb365f36fe151529be66c26d10125
 
                         CourseFile courseFile = new CourseFile();
 
                         ICourseFileDAO courseFileDAO = new CourseFileDAOImpl();
+<<<<<<< HEAD
                         CourseFile.this.c_date = new Date();
                         CourseFile.this.c_isDisplay = true;
                         CourseFile.this.c_name = fileName;
@@ -106,6 +129,18 @@ public class UploadServlet extends HttpServlet {
                         CourseFile.this.c_size = item.getSize();
                         HttpSession session = request.getSession();
                         CourseFile.this.c_teachId = session.getAttribute("teacher").getT_id();
+=======
+                        courseFile.setC_date(new Date()); 
+                        courseFile.setC_isDisplay(true);
+                        courseFile.setC_name(fileName); 
+                        courseFile.setC_path(filePath);
+                        courseFile.setC_size(item.getSize()); 
+//                        HttpSession session = request.getSession();
+                        Teacher teacher = (Teacher)request.getSession().getAttribute("teacher");
+                        System.out.println(teacher.getT_id()+ "teacher ID");
+//                        System.out.println(teacher+"UploadServletUploadServletUploadServlet");
+                        courseFile.setC_teachId(teacher.getT_id());
+>>>>>>> 89823d4536abb365f36fe151529be66c26d10125
 
                         boolean isOk = courseFileDAO.save(courseFile);
                         PrintWriter out = response.getWriter();
@@ -122,7 +157,7 @@ public class UploadServlet extends HttpServlet {
        
         
                 // 跳转到 message.jsp
-        getServletContext().getRequestDispatcher("/message.jsp").forward(
-            request, response);
+       /* getServletContext().getRequestDispatcher("/message.jsp").forward(
+            request, response);*/
     }
 }

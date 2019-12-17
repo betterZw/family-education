@@ -31,7 +31,7 @@
 		<article class="createApp">
 			<div class="title">
 				<a href="${pageContext.request.contextPath }/FindAllTeacherServlet">首页</a> &gt; 个人中心
-			</div>
+			</div> 
 		</article>
 		<form class="app-modify user-info" action="${pageContext.request.contextPath }/UpdateStudentServlet"
 		method="post">

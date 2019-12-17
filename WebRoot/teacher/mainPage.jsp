@@ -170,12 +170,12 @@
 					</div>
 				</div>
 				<ul class="navbar pull-left">
-					<!-- <li class=""><a href="http://www.jiajiao114.com/">首页</a></li> -->
+					<li class=""><a href="http://www.jiajiao114.com/">首页</a></li> 
 					<li class="active"><a href="http://www.jiajiao114.com/l-c1/">留言与回复<i><img
 								src="./main_page/hot.png" alt=""></i></a></li>
 					<li class=""><a href="http://www.jiajiao114.com/xuqiu.php">快速请家教</a></li>
-					<li class=""><a href="http://www.jiajiao114.com/xueyuan/">文件共享</a></li>
-					<li class=""><a href="${pageContext.request.contextPath }/FindByTeacherIdServlet?id=${sessionScope.teacher.t_id}">个人中心</a></li>
+					<li class=""><a href="${pageContext.request.contextPath }/teacher/downloads.jsp">文件共享</a></li>
+					<li class=""><a href="${pageContext.request.contextPath }/FindByTeacherIdServlet?id=${teacher.t_id}">个人中心</a></li>
 					<li class=""><a
 						href="http://www.jiajiao114.com/help/jiajiao_fee.php">投诉</a></li>
 					<div class="clear"></div>
@@ -209,7 +209,34 @@
 											src="./main_page/w_default_avatar.jpg" alt="上海家教陈老师">
 									</div>
 									
-									<span>${student.s_userName }</span> <i>编号：${student.s_id }</i>
+									<span>${student.s_userName }</span> 
+									<i>编号：${student.s_id }</i>
+									<i id="haveMsg"></i>
+									
+									
+											<script type="text/javascript">
+												//var list = ${requestScope.messages }.length;
+												/* alert("dskdl"); */
+												/* for (var i=0; i<${requestScope.messages }.length; ++i) {
+													alert("qq");
+													if (${requestScope.messages }[i].m_from == ${student.s_id }) {
+														var result = document.getElementById("haveMsg");
+														result.innerHTML += "${requestScope.messages }[i].m_isReply";
+														
+													}
+												} */
+											</script>
+								
+									<%-- <c:forEach items="${requestScope.messages }" var="message">
+										<c:if test="${message.m_from } == ${student.s_id }">
+											<i>${message.m_isReply }</i>
+										</c:if>
+									</c:forEach> --%>
+									<%-- <i>编号：${student.s_id }</i> --%>
+									<%-- for(i: 0-msglst)
+										if (${student.s_id } == i)
+											desply(isreply)
+									 --%>
 								</div>
 								<div class="teacher-info">
 									<dl>

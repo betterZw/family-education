@@ -77,26 +77,28 @@
 				
 			</div>
 			
+			
+			
 			<div class="form-group">
 				<label class="yw-label">学号 / 工号</label> 
 				<input class="yw-input"
-					readonly type="text" name ="id" value="${requestScope.teacher.t_id }">
+					readonly type="text" name ="id" value="${sessionScope.teacher.t_id }">
 			</div>
 			<div class="form-group">
 				<label class="yw-label">用户名</label> <input class="yw-input"
-					type="text" name="userName" value="${requestScope.teacher.t_userName }">
+					type="text" name="userName" value="${sessionScope.teacher.t_userName }">
 			</div>
 			<div class="form-group">
 				<label class="yw-label">密码</label> <input class="yw-input"
-					name ="pwd" type="password" value="${requestScope.teacher.t_passWord }">
+					name ="pwd" type="password" value="${sessionScope.teacher.t_passWord }">
 			</div>
 			<div class="form-group">
 				<label class="yw-label">年级</label> <input class="yw-input"
-					type="text" name="grade" value="${requestScope.teacher.t_grade }"">
+					type="text" name="grade" value="${sessionScope.teacher.t_grade }"">
 			</div>
 			<div class=" form-group">
 				<label class="yw-label">科目</label> <input class="yw-input"
-					type="text" name="subject" value="${requestScope.teacher.t_subject }">
+					type="text" name="subject" value="${sessionScope.teacher.t_subject }">
 			</div>
 			
 			<input type="submit" class="yw-btn bright-blue btn-save" value="保存设置">

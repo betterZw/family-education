@@ -1,14 +1,11 @@
 package com.it.servlet.qt;
 
 import java.io.IOException;
-import java.io.PrintWriter;
 
 import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 
 import com.it.dao.IStudentDAO;
 import com.it.dao.ITeacherDAO;
@@ -27,7 +24,6 @@ public class UserLoginServlet extends HttpServlet {
 		String pwd = request.getParameter("pwd");
 		String option = request.getParameter("selector");//获取下拉框选项
 	
-		HttpSession session = request.getSession();
 		String path = "/frontLogin.jsp";
 		if("学生".equals(option)){
 			IStudentDAO studentDAO = new StudentDAOImpl();
@@ -35,7 +31,7 @@ public class UserLoginServlet extends HttpServlet {
 			
 			
 			if(student != null){
-				session.setAttribute("student", student);
+				request.getSession().setAttribute("student", student);
 				path = "/FindAllTeacherServlet";
 			}
 			
@@ -43,13 +39,11 @@ public class UserLoginServlet extends HttpServlet {
 			ITeacherDAO teacherDAO = new TeacherDAOImpl();
 			Teacher teacher = teacherDAO.findByNameAndPwd(name, pwd);
 			
-			
 			if(teacher != null){
-				session.setAttribute("teacher", teacher);
+				request.getSession().setAttribute("teacher", teacher);
+				System.out.println("tc--->"+teacher.getT_id());
 				path = "/FindAllStudentServlet";
 			}
-			
-			
 		}
 		request.getRequestDispatcher(path).forward(request, response);
 		

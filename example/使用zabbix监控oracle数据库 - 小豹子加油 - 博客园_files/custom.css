@@ -1,0 +1,322 @@
+/* **********************
+ * 整体布局
+ * **********************/
+
+/* 整体布局 */
+body {
+  background: #e6ecf0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica
+      Neue, PingFang SC, Hiragino Sans GB, Microsoft YaHei, sans-serif;
+}
+
+#home {
+  max-width: 1140px;
+  padding: 15px;
+  background: transparent;
+  box-shadow: none;
+  margin-top: 0;
+  width: auto;
+}
+
+#main {
+  margin-top: 15px;
+}
+
+#mainContent .forFlow {
+  padding-right: 20px;
+}
+
+/* 非阅读区域去掉白色背景 */
+.newsItem,
+.catListEssay,
+.catListLink,
+.catListNoteBook,
+.catListTag,
+.catListPostCategory,
+.catListPostArchive,
+.catListImageCategory,
+.catListArticleArchive,
+.catListView,
+.catListFeedback,
+.mySearch,
+.catListComment,
+.catListBlogRank,
+.catList,
+.catListArticleCategory {
+  background-color: transparent;
+}
+
+/* **********************
+ * 博客页首
+ * **********************/
+
+/* 隐藏系统标题 */
+#blogTitle {
+  display: none;
+}
+
+/* 顶部通告条 */
+.c-notice {
+  padding: 10px 0;
+  background: tan;
+  font-size: 0.9em;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.16), 0 2px 6px rgba(0, 0, 0, 0.23);
+  font-size: 15px;
+}
+
+.c-notice > div {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.c-notice a {
+  color: blue;
+}
+
+/* 头像和社交 */
+.c-portrait {
+  text-align: center;
+  padding: 50px 0;
+  background: #39424b;
+  color: #fff;
+  margin-bottom: -40px;
+}
+
+/* 头像 */
+.c-portrait > img {
+  display: inline-block;
+  height: 80px;
+  border-radius: 50%;
+}
+
+/* 标题和签名 */
+.c-portrait h1 {
+  font-size: 25px;
+  font-weight: bold;
+  margin: 5px 0;
+}
+
+.c-portrait h1 a {
+  color: #fff;
+}
+
+.c-portrait h2 {
+  font-size: 16px;
+  margin: 7px 0 10px;
+  color: #ccc;
+}
+
+/* 社交图标 */
+.c-social a {
+  color: #959da5;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+/* **********************
+ * 导航栏
+ * **********************/
+
+#navigator {
+  padding: 0 10px;
+  border-bottom: 2px solid #ccc;
+}
+
+#stats_article_count {
+  display: none;
+}
+
+/* **********************
+ * 侧边栏
+ * **********************/
+
+#sideBar {
+  width: 250px;
+  margin-top: 0;
+}
+
+#sideBar a {
+  color: inherit;
+}
+
+/* 隐藏侧边公告标题 */
+.newsItem .catListTitle {
+  display: none;
+}
+
+/* 增加列表项间距 */
+.sidebar-block li {
+  margin-bottom: 5px;
+}
+
+/* **********************
+ * 文章列表
+ * **********************/
+
+/* 文章列表 */
+#topics .postTitle {
+  font-size: 28px;
+  margin: 35px 0 30px;
+  padding-left: 0;
+}
+
+#mainContent .day {
+  padding: 15px 20px;
+  background: #fff;
+}
+
+#mainContent .day .postTitle a {
+  display: inline-block;
+}
+
+/* **********************
+ * 文章详情
+ * **********************/
+
+pre {
+  margin-bottom: 1.35em;
+}
+
+pre code {
+  padding: 10px 16px !important;
+}
+
+.post {
+  background: #fff;
+  padding: 0 60px 60px;
+  box-shadow: 0 2px 6px rgba(100, 100, 100, 0.3);
+}
+
+/* 文章标题 */
+.postTitle {
+  border-left: 8px solid #21759b;
+  margin-bottom: 5px;
+  font-weight: bold;
+  line-height: 1;
+  box-sizing: border-box;
+}
+
+.postTitle a:hover {
+  margin-left: 0;
+}
+
+/* 去除首行缩进 */
+.postBody p,
+.postCon p {
+  text-indent: 0;
+}
+
+/* 重写引用块样式 */
+.postBody blockquote {
+  min-height: auto;
+  border-top: none;
+  border-bottom: none;
+  border-right: none;
+  padding: 0 0 0 1em;
+}
+
+/* 增加底部留白 */
+#cnblogs_post_body {
+  padding-bottom: 5px;
+}
+
+/* 防止图片溢出 */
+#cnblogs_post_body img {
+  max-width: 100%;
+}
+
+/* 文章底部信息 */
+.postDesc {
+  margin-top: 0;
+}
+
+/* **********************
+ * 评论
+ * **********************/
+
+#comment_form_container .comment_textarea {
+  width: 100%;
+}
+
+.comment_vote {
+  padding-right: 2px;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.comment_vote a.comment_digg {
+  color: #f80;
+}
+
+.feedbackItem {
+  margin: 20px 0 25px;
+  background: #fff;
+  padding: 10px 15px;
+}
+
+.feedbackCon {
+  font-size: 13px;
+  border-bottom: 0;
+  padding: 10px 5px 0 5px;
+  text-align: justify;
+}
+
+/* **********************
+ * 文章评价
+ * **********************/
+
+#div_digg {
+  position: fixed;
+  right: 30px;
+  bottom: 50px;
+  background: #fff;
+  padding: 20px 20px 15px;
+  border-radius: 5px;
+  border: 1px solid #888;
+  box-shadow: 0 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+/* **********************
+ * 隐藏广告
+ * **********************/
+
+#ad_t2,
+#opt_under_post,
+.c_ad_block,
+#under_post_news,
+#under_post_kb {
+  display: none !important;
+}
+
+/* **********************
+ * 适配手机
+ * **********************/
+
+@media (max-width: 767px) {
+  #home {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  #div_digg {
+    width: auto;
+    padding: 0;
+    right: -25px;
+    bottom: 3px;
+    box-shadow: none;
+  }
+  #div_digg .buryit {
+    display: none;
+  }
+  #mainContent .forFlow {
+    padding-right: 0;
+  }
+  #mainContent .post {
+    padding: 0 20px;
+  }
+
+  #sideBar,
+  #blog-comments-placeholder {
+    padding: 0 15px;
+  }
+}
