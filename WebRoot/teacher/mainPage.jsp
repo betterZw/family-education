@@ -170,12 +170,12 @@
 					</div>
 				</div>
 				<ul class="navbar pull-left">
-					<!-- <li class=""><a href="http://www.jiajiao114.com/">首页</a></li> -->
+					<li class=""><a href="http://www.jiajiao114.com/">首页</a></li> 
 					<li class="active"><a href="http://www.jiajiao114.com/l-c1/">留言与回复<i><img
 								src="./main_page/hot.png" alt=""></i></a></li>
 					<li class=""><a href="http://www.jiajiao114.com/xuqiu.php">快速请家教</a></li>
-					<li class=""><a href="${pageContext.request.contextPath }/teacher/downloads.html">文件共享</a></li>
-					<li class=""><a href="${pageContext.request.contextPath }/FindByTeacherIdServlet?id=${sessionScope.t_id}">个人中心</a></li>
+					<li class=""><a href="${pageContext.request.contextPath }/teacher/downloads.jsp">文件共享</a></li>
+					<li class=""><a href="${pageContext.request.contextPath }/FindByTeacherIdServlet?id=${teacher.t_id}">个人中心</a></li>
 					<li class=""><a
 						href="http://www.jiajiao114.com/help/jiajiao_fee.php">投诉</a></li>
 					<div class="clear"></div>

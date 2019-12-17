@@ -23,7 +23,7 @@ public class FindByTeacherIdServlet extends HttpServlet {
 		Teacher teacher = teacherDAO.findById(id);
 		session.setAttribute("teacher", teacher);
 		System.out.println("*********************************");
-		System.out.println(teacher);
+		System.out.println("findbytid-->t_id--->"+teacher.getT_id());
 		System.out.println("*********************************");
 		request.getRequestDispatcher("/teacher/individual_center.jsp").forward(request, response);
 		

@@ -43,7 +43,7 @@ public class FindAllStudentServlet extends HttpServlet {
 		List<Message> messages = messageDAO.findAll();
 		request.setAttribute("students", students);
 		request.setAttribute("messages", messages);
-		request.getRequestDispatcher("teacher/mainPage.jsp").forward(request, response);
+		request.getRequestDispatcher("/teacher/mainPage.jsp").forward(request, response);
 	}
 
 }

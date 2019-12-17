@@ -3,6 +3,7 @@ package com.it.dao.impl;
 import java.util.List;
 
 import com.it.dao.ICourseFileDAO;
+import com.it.db.DBMananger;
 import com.it.entity.CourseFile;
 
 public class CourseFileDAOImpl implements ICourseFileDAO{
@@ -20,7 +21,7 @@ public class CourseFileDAOImpl implements ICourseFileDAO{
 
 		String sql = "insert into CourseFile(c_teachId,c_path,c_name,c_isDisplay,c_date,c_size)"
 				+ " values('"+courseFile.getC_teachId()+"','"+courseFile.getC_path()+"',"+courseFile.getC_name()+",'"+
-				courseFile.getC_isDisplay()+"',"
+				courseFile.isC_isDisplay()+"',"
 						+ "'"+courseFile.getC_date()+"','"+courseFile.getC_size()+"')";
 		DBMananger dbMananger = new DBMananger();
 		return (dbMananger.update(sql) == 1);

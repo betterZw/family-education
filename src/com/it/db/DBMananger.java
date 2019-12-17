@@ -33,18 +33,6 @@ public class DBMananger {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-
-
-
-
-
-
-
-
-
-
-
-
 		
 		return rs;
 	}
@@ -89,19 +77,7 @@ public class DBMananger {
 				con = null;
 			}
 		} catch (SQLException e) {
-			System.out.println("关闭资源
-
-
-
-
-
-
-
-
-
-
-
-			时发生异常");
+			System.out.println("关闭资源时发生异常");
 		}
 	}
 }

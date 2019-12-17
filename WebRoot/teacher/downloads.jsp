@@ -1,6 +1,4 @@
 <%@ page language="java" contentType="text/html; charset=utf-8"%>
-
-<!-- saved from url=(0068)https://downloads.openwrt.org/releases/17.01.0/targets/imx6/generic/ -->
 <html>
 
 <head>
@@ -143,172 +141,13 @@
       </tr>
       <tr>
         <td class="n"><a
-            href="https://downloads.openwrt.org/releases/17.01.0/targets/imx6/generic/lede-17.01.0-r3205-59508e3-imx6-imx6dl-gw51xx.dtb">imx6dl-gw51xx.dtb</a>
+            href="https://downloads.openwrt.">${requestScope.courseFile.c_name }</a>
         </td>
         <td class="sh">c92e4e1e34441a349f2fec7b2a33ec69480c9f2f516a3c308aeaced5411ac8e0</td>
         <td class="s">29.3 KB</td>
         <td class="d">Tue Feb 21 05:53:35 2017</td>
       </tr>
-      <tr>
-        <td class="n"><a
-            href="https://downloads.openwrt.org/releases/17.01.0/targets/imx6/generic/lede-17.01.0-r3205-59508e3-imx6-imx6dl-gw52xx.dtb">imx6dl-gw52xx.dtb</a>
-        </td>
-        <td class="sh">1b4a7e137d91c6988f130779507171c07881e052b274a9c70d82b27ae9cf86b1</td>
-        <td class="s">32.6 KB</td>
-        <td class="d">Tue Feb 21 05:53:36 2017</td>
-      </tr>
-      <tr>
-        <td class="n"><a
-            href="https://downloads.openwrt.org/releases/17.01.0/targets/imx6/generic/lede-17.01.0-r3205-59508e3-imx6-imx6dl-gw53xx.dtb">imx6dl-gw53xx.dtb</a>
-        </td>
-        <td class="sh">4a86459fec3a0fc9a9b542c50b185ad7a3895bc47d8b4003659b6422697c59ce</td>
-        <td class="s">32.5 KB</td>
-        <td class="d">Tue Feb 21 05:53:36 2017</td>
-      </tr>
-      <tr>
-        <td class="n"><a
-            href="https://downloads.openwrt.org/releases/17.01.0/targets/imx6/generic/lede-17.01.0-r3205-59508e3-imx6-imx6dl-gw54xx.dtb">imx6dl-gw54xx.dtb</a>
-        </td>
-        <td class="sh">4d3d640e11fc48504c9304dca3b1b9a986090f52eed2507ff336367c55484359</td>
-        <td class="s">33.5 KB</td>
-        <td class="d">Tue Feb 21 05:53:36 2017</td>
-      </tr>
-      <tr>
-        <td class="n"><a
-            href="https://downloads.openwrt.org/releases/17.01.0/targets/imx6/generic/lede-17.01.0-r3205-59508e3-imx6-imx6dl-gw551x.dtb">imx6dl-gw551x.dtb</a>
-        </td>
-        <td class="sh">8399d6886c99773a7f0747557aa919845f70c260b3b7a169bdc9c2901c928c6a</td>
-        <td class="s">28.2 KB</td>
-        <td class="d">Tue Feb 21 05:53:36 2017</td>
-      </tr>
-      <tr>
-        <td class="n"><a
-            href="https://downloads.openwrt.org/releases/17.01.0/targets/imx6/generic/lede-17.01.0-r3205-59508e3-imx6-imx6dl-gw552x.dtb">imx6dl-gw552x.dtb</a>
-        </td>
-        <td class="sh">5632ad598bf71c8e9c4bc486b8556aab06c983ab046e7bf7de924b230e2284a3</td>
-        <td class="s">28.0 KB</td>
-        <td class="d">Tue Feb 21 05:53:36 2017</td>
-      </tr>
-      <tr>
-        <td class="n"><a
-            href="https://downloads.openwrt.org/releases/17.01.0/targets/imx6/generic/lede-17.01.0-r3205-59508e3-imx6-imx6q-gw51xx.dtb">imx6q-gw51xx.dtb</a>
-        </td>
-        <td class="sh">3b4a7dcc2358f92661ed5a36e86710af07b2cd32cebe4afd525a435431e7a350</td>
-        <td class="s">32.0 KB</td>
-        <td class="d">Tue Feb 21 05:53:43 2017</td>
-      </tr>
-      <tr>
-        <td class="n"><a
-            href="https://downloads.openwrt.org/releases/17.01.0/targets/imx6/generic/lede-17.01.0-r3205-59508e3-imx6-imx6q-gw52xx.dtb">imx6q-gw52xx.dtb</a>
-        </td>
-        <td class="sh">c60d9da3d609c8aa7c09946e54d45009228b53089db483dcc436c317734a680a</td>
-        <td class="s">35.3 KB</td>
-        <td class="d">Tue Feb 21 05:53:43 2017</td>
-      </tr>
-      <tr>
-        <td class="n"><a
-            href="https://downloads.openwrt.org/releases/17.01.0/targets/imx6/generic/lede-17.01.0-r3205-59508e3-imx6-imx6q-gw53xx.dtb">imx6q-gw53xx.dtb</a>
-        </td>
-        <td class="sh">f9a229a466ee191911d2ba89bb3e3724fdb5486f9f54f8807a6af994b344ee1c</td>
-        <td class="s">35.3 KB</td>
-        <td class="d">Tue Feb 21 05:53:43 2017</td>
-      </tr>
-      <tr>
-        <td class="n"><a
-            href="https://downloads.openwrt.org/releases/17.01.0/targets/imx6/generic/lede-17.01.0-r3205-59508e3-imx6-imx6q-gw5400-a.dtb">imx6q-gw5400-a.dtb</a>
-        </td>
-        <td class="sh">c72f564e7334af4d91c42ad65735e5ebeda8e2b7085ee9bf26e82a227de96044</td>
-        <td class="s">34.0 KB</td>
-        <td class="d">Tue Feb 21 05:53:43 2017</td>
-      </tr>
-      <tr>
-        <td class="n"><a
-            href="https://downloads.openwrt.org/releases/17.01.0/targets/imx6/generic/lede-17.01.0-r3205-59508e3-imx6-imx6q-gw54xx.dtb">imx6q-gw54xx.dtb</a>
-        </td>
-        <td class="sh">dec8ec78a74d9bdec9d81f70aeff62a7b0a3959ffcc285a1fabaf8c0891b3bad</td>
-        <td class="s">36.3 KB</td>
-        <td class="d">Tue Feb 21 05:53:43 2017</td>
-      </tr>
-      <tr>
-        <td class="n"><a
-            href="https://downloads.openwrt.org/releases/17.01.0/targets/imx6/generic/lede-17.01.0-r3205-59508e3-imx6-imx6q-gw551x.dtb">imx6q-gw551x.dtb</a>
-        </td>
-        <td class="sh">03e09ce039e290de96bda0ee0e42dd7f39d95360fccf2b578525e31ed91a1c0a</td>
-        <td class="s">30.9 KB</td>
-        <td class="d">Tue Feb 21 05:53:43 2017</td>
-      </tr>
-      <tr>
-        <td class="n"><a
-            href="https://downloads.openwrt.org/releases/17.01.0/targets/imx6/generic/lede-17.01.0-r3205-59508e3-imx6-imx6q-gw552x.dtb">imx6q-gw552x.dtb</a>
-        </td>
-        <td class="sh">d2d5329751565c6d36eb8af34336020972ed1dd36e0ac1f50a0c88c2257c39f1</td>
-        <td class="s">30.8 KB</td>
-        <td class="d">Tue Feb 21 05:53:43 2017</td>
-      </tr>
-      <tr>
-        <td class="n"><a
-            href="https://downloads.openwrt.org/releases/17.01.0/targets/imx6/generic/lede-17.01.0-r3205-59508e3-imx6-imx6q-gw553x.dtb">imx6q-gw553x.dtb</a>
-        </td>
-        <td class="sh">77b6bd387eb712cb1aabdf7c51985a0c7e7dfbb130af8faa629059f28d119816</td>
-        <td class="s">34.4 KB</td>
-        <td class="d">Tue Feb 21 05:53:43 2017</td>
-      </tr>
-      <tr>
-        <td class="n"><a
-            href="https://downloads.openwrt.org/releases/17.01.0/targets/imx6/generic/lede-17.01.0-r3205-59508e3-imx6-rootfs.tar.gz">rootfs.tar.gz</a>
-        </td>
-        <td class="sh">fda6354b037aa997a74d9b23e56db0f69d790678c58b308bb8fd93a90222ef44</td>
-        <td class="s">1919.1 KB</td>
-        <td class="d">Tue Feb 21 05:54:51 2017</td>
-      </tr>
-      <tr>
-        <td class="n"><a
-            href="https://downloads.openwrt.org/releases/17.01.0/targets/imx6/generic/lede-17.01.0-r3205-59508e3-imx6-ventana-large-squashfs-nand.ubi">ventana-large-squashfs-nand.ubi</a>
-        </td>
-        <td class="sh">747355d28f8a3ac3e80c66c170029488e5aaf9e5c65b48cbcb0f07ae3d917f40</td>
-        <td class="s">7936.0 KB</td>
-        <td class="d">Tue Feb 21 05:54:54 2017</td>
-      </tr>
-      <tr>
-        <td class="n"><a
-            href="https://downloads.openwrt.org/releases/17.01.0/targets/imx6/generic/lede-17.01.0-r3205-59508e3-imx6-ventana-large-uImage">ventana-large-uImage</a>
-        </td>
-        <td class="sh">8d138507ba4e823fb75a7a56062f512e583bc0ed2ac28f39bf38c35f5abbf87f</td>
-        <td class="s">1854.4 KB</td>
-        <td class="d">Tue Feb 21 05:54:52 2017</td>
-      </tr>
-      <tr>
-        <td class="n"><a
-            href="https://downloads.openwrt.org/releases/17.01.0/targets/imx6/generic/lede-17.01.0-r3205-59508e3-imx6-ventana-squashfs-bootfs.tar.gz">ventana-squashfs-bootfs.tar.gz</a>
-        </td>
-        <td class="sh">1d585f86b7a1d64027400bc375155d57a5a343daa59651eee0c0cd245c02ff42</td>
-        <td class="s">1945.4 KB</td>
-        <td class="d">Tue Feb 21 05:54:53 2017</td>
-      </tr>
-      <tr>
-        <td class="n"><a
-            href="https://downloads.openwrt.org/releases/17.01.0/targets/imx6/generic/lede-17.01.0-r3205-59508e3-imx6-ventana-squashfs-nand.ubi">ventana-squashfs-nand.ubi</a>
-        </td>
-        <td class="sh">e9d2f004d041533c8fa2061c7283ae9ca8c840a1acaeac36fda3b41a4e17b362</td>
-        <td class="s">6016.0 KB</td>
-        <td class="d">Tue Feb 21 05:54:54 2017</td>
-      </tr>
-      <tr>
-        <td class="n"><a
-            href="https://downloads.openwrt.org/releases/17.01.0/targets/imx6/generic/lede-17.01.0-r3205-59508e3-imx6-ventana-uImage">ventana-uImage</a>
-        </td>
-        <td class="sh">8d138507ba4e823fb75a7a56062f512e583bc0ed2ac28f39bf38c35f5abbf87f</td>
-        <td class="s">1854.4 KB</td>
-        <td class="d">Tue Feb 21 05:54:52 2017</td>
-      </tr>
-      <tr>
-        <td class="n"><a
-            href="https://downloads.openwrt.org/releases/17.01.0/targets/imx6/generic/lede-17.01.0-r3205-59508e3-imx6-wandboard-uImage">wandboard-uImage</a>
-        </td>
-        <td class="sh">8d138507ba4e823fb75a7a56062f512e583bc0ed2ac28f39bf38c35f5abbf87f</td>
-        <td class="s">1854.4 KB</td>
-        <td class="d">Tue Feb 21 05:54:51 2017</td>
-      </tr>
+    
     </tbody>
   </table>
   
@@ -316,6 +155,13 @@
   
   
   
+
+<form method="post" action="${pageContext.request.contextPath }/UploadServlet" enctype="multipart/form-data">
+    选择一个文件:
+    <input type="file" name="uploadFile" />
+    <br/><br/>
+    <input type="submit" value="上传" />
+</form>
 
   <!-- <h2>Supplementary Files</h2>
   <p>These are supplementary resources for the <b>imx6/generic</b> target.
