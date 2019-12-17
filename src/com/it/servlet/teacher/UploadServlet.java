@@ -2,6 +2,7 @@ package com.it.servlet.qt;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.Date;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -15,8 +16,7 @@ import com.it.dao.impl.StudentDAOImpl;
 import com.it.dao.impl.TeacherDAOImpl;
 import com.it.entity.Student;
 import com.it.entity.Teacher;
-
-
+import com.it.entity.CourseFile;
 
 /**
  * Servlet implementation class UploadServlet
@@ -95,6 +95,21 @@ public class UploadServlet extends HttpServlet {
                         item.write(storeFile);
                         request.setAttribute("message",
                             "文件上传成功!");
+
+                        CourseFile courseFile = new CourseFile();
+
+                        ICourseFileDAO courseFileDAO = new CourseFileDAOImpl();
+                        CourseFile.this.c_date = new Date();
+                        CourseFile.this.c_isDisplay = ture;
+                        CourseFile.this.c_name = fileName;
+                        CourseFile.this.c_path = filePath;
+                        CourseFile.this.c_size = item.getSize();
+                        HttpSession session = request.getSession();
+                        CourseFile.this.c_teachId = session.getAttribute("teacher").getT_id();
+
+                        boolean isOk = courseFileDAO.save(courseFile);
+                        PrintWriter out = response.getWriter();
+                        out.print(isOk);
                     }
                 }
             }
@@ -104,11 +119,7 @@ public class UploadServlet extends HttpServlet {
         }
 
 
-        CourseFile courseFile = new CourseFile();
-        ICourseFileDAO courseFileDAO = new CourseFileDAOImpl();
-        boolean isOk = courseFileDAO.save(courseFile);
-        PrintWriter out = response.getWriter();
-        out.print(isOk);
+       
         
                 // 跳转到 message.jsp
         getServletContext().getRequestDispatcher("/message.jsp").forward(
