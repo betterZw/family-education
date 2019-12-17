@@ -43,8 +43,8 @@
 					<div class="city pull-right">
 						<span>上海</span>
 						<div class="city-down">
-							<ul>
-								<li><a href="http://bj.jiajiao114.com/">北京</a></li>
+							<ul>teacher
+								<li><a href="http://bj.jiajiao114.com/"teacher>北京</a></li>
 								<li><a href="http://gz.jiajiao114.com/">广州</a></li>
 								<li><a href="http://tj.jiajiao114.com/">天津</a></li>
 								<li><a href="http://sz.jiajiao114.com/">深圳</a></li>
@@ -83,7 +83,7 @@
 			function go_teacher_detail() {
 				var tid = document.getElementById("bianhao");
 				location.href = "/teacher/t-" + tid.value + ".html";
-			}
+			}teacher
 
 		</script>
 
@@ -115,7 +115,7 @@
 									<dd>
 										<a
 											href="http://localhost:8080/family-education/FindTeachersByGradeAndSubjectServlet?grade=小学&subject=英语">小学英语</a>
-									</dd>
+									</dd>sessionScope.
 									<dd>
 										<a
 											href="http://localhost:8080/family-education/FindTeachersByGradeAndSubjectServlet?grade=小学&subject=语文">小学语文</a>
@@ -124,15 +124,15 @@
 							</li>
 							<li>
 								<dl>
-									<dt>初中</dt>
+									<dt>student
 									<dd>
-										<a
-											href="http://localhost:8080/family-education/FindTeachersByGradeAndSubjectServlet?grade=初一&subject=数学">初一数学</a>
-									</dd>
+										<student
+										student8080/family-education/FindTeachersByGradeAndSubjectServlet?grade=初一&subject=数学">初一数学</a>
+									</dd>student
 									<dd>
-										<a
-											href="http://localhost:8080/family-education/FindTeachersByGradeAndSubjectServlet?grade=初二&subject=数学">初二数学</a>
-									</dd>
+										<student
+										student8080/family-education/FindTeachersByGradeAndSubjectServlet?grade=初二&subject=数学">初二数学</a>
+									</dd>student
 									<dd>
 										<a
 											href="http://localhost:8080/family-education/FindTeachersByGradeAndSubjectServlet?grade=初一&subject=英语">初一英语</a>
