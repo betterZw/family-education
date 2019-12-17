@@ -1,5 +1,9 @@
 package com.it.dao.impl;
 
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 import com.it.dao.ICourseFileDAO;
@@ -10,19 +14,12 @@ public class CourseFileDAOImpl implements ICourseFileDAO{
 
 	@Override
 	public boolean save(CourseFile courseFile) {
-		// TODO Auto-generated method stub
-		// c_id INT identity NOT NULL PRIMARY KEY, -- primary key column
-		// c_teachId INT NOT NULL,
-		// c_path VARCHAR(512) NOT NULL,
-		// c_name VARCHAR(128) NOT NULL,
-		// c_isDisplay BIT,
-		// c_date DATETIME,
-		// c_size FLOAT,
 
 		String sql = "insert into CourseFile(c_teachId,c_path,c_name,c_isDisplay,c_date,c_size)"
-				+ " values('"+courseFile.getC_teachId()+"','"+courseFile.getC_path()+"',"+courseFile.getC_name()+",'"+
+				+ " values('"+courseFile.getC_teachId()+"','"+courseFile.getC_path()+"','"+courseFile.getC_name()+"','"+
 				courseFile.isC_isDisplay()+"',"
-						+ "'"+courseFile.getC_date()+"','"+courseFile.getC_size()+"')";
+						+ "getdate(),'"+courseFile.getC_size()+"')";
+		System.out.println(sql);
 		DBMananger dbMananger = new DBMananger();
 		return (dbMananger.update(sql) == 1);
 	}
@@ -49,8 +46,32 @@ public class CourseFileDAOImpl implements ICourseFileDAO{
 
 	@Override
 	public List<CourseFile> findAll() {
-		// TODO Auto-generated method stub
-		return null;
+		List<CourseFile> courseFiles = new ArrayList<CourseFile>();
+		CourseFile courseFile = null;
+		String sql = "select c_id,c_teachId,c_path,c_name,c_isDisplay,c_date,c_size from courseFile";
+		DBMananger dbMananger = new DBMananger();
+		ResultSet rs = dbMananger.query(sql);
+		try {
+			while(rs.next()){
+				int c_id = rs.getInt(1);
+				int  c_teachId = rs.getInt(2);
+				String c_path = rs.getString(3);
+				String c_name = rs.getString(4);
+				boolean c_isDisplay = rs.getBoolean(5);
+				Date c_date = rs.getDate(6);
+				float c_size = rs.getFloat(7);
+				
+				courseFile = new CourseFile(c_id, c_teachId, c_path, c_name, c_isDisplay, c_date, c_size);
+				courseFiles.add(courseFile);
+				
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}finally{
+			dbMananger.close();
+		}
+		return courseFiles;
 	}
 
 }

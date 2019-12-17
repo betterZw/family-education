@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>前台登录页面</title>
     <meta charset="utf-8">
-    <meta name="keywords" content="寒假在线一对一辅导,高中生在线1对1辅导,高中生在线一对一补习,在线一对一,高考,艺考">
+    <meta name="keywords" content="寒假在线一对一辅导,高中生在线1对1辅导,高中生在线一对一补习,在线一对一,高考">
     <meta name="description" content="中国高端在线1对1高中辅导品牌|在线一对一">
 
 
@@ -16,47 +16,6 @@
     <script src="https://hm.baidu.com/hm.js?2158a4d2a4a595edf73129ee30dd7481"></script>
     <script type="text/javascript" async="" defer="" src="./files/piwik.js"></script>
     <script type="text/javascript" src="./files/4b9d2a8b77e041c761bcd1d626488278.js"></script>
-    <!--[if lt IE 9]> 	
-
-<script type="text/javascript">
-    // 统计PV UV
-    ZMSDK && ZMSDK.onEvent("进入页面", location.pathname);
-    // 统计ABTestUrl
-    var url = location.search;
-    var theRequest = new Object();
-    if (url.indexOf("?") != -1) {
-        var str = url.substr(1);
-        strs = str.split("&");
-        for (var i = 0; i < strs.length; i++) {
-            theRequest[strs[i].split("=")[0]] = unescape(strs[i].split("=")[1]);
-        }
-    }
-    if (theRequest.ABTestUrl) {
-        ZMSDK && ZMSDK.onEvent("ABTestUrl", location.href.split("?")[0], {
-            ABTestUrl: theRequest.ABTestUrl
-        });
-    }
-</script>
-
-
-
-
-<script src="./files/fundebug.1.2.3.min_d41d8cd.js" apikey="491612a67cb209a575df143fff3c43fe27bd38df4d2d78db527bdef74895e724"></script>
-<!-- Piwik -->
-    <script type="text/javascript">
-        var _paq = _paq || [];
-        /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
-        _paq.push(['trackPageView']);
-        _paq.push(['enableLinkTracking']);
-        (function () {
-            var u = "//tongji.zmlearn.com/";
-            _paq.push(['setTrackerUrl', u + 'piwik.php']);
-            _paq.push(['setSiteId', '1']);
-            var d = document, g = d.createElement('script'), s = d.getElementsByTagName('script')[0];
-            g.type = 'text/javascript'; g.async = true; g.defer = true; g.src = u + 'piwik.js'; s.parentNode.insertBefore(g, s);
-        })();
-    </script>
-    <!-- End Piwik Code -->
 
 
 
@@ -1876,10 +1835,14 @@
                     </form>
 
                     <a href="${pageContext.request.contextPath}/register.jsp">
-                        <div style="position:absolute;left:800px;top:500px;" class="input-wp form-group ui-form-item">
+                        <div style="position:absolute;left:800px;top:470px;" class="input-wp form-group ui-form-item">
                             <input type="submit" value="注册">
                         </div>
 
+                    </a>
+                    
+                    <a href="${pageContext.request.contextPath}/background/htlogin.jsp" style="position:absolute;left:800px;top:530px;">
+                    	<h1 style="font-color:blue">管理员登录,请点击 >这里!</h1>
                     </a>
 
 

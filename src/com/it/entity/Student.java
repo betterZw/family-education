@@ -1,6 +1,8 @@
 package com.it.entity;
 
-public class Student {
+import java.io.Serializable;
+
+public class Student implements Serializable{
 	private int s_id;
     private String s_userName;
     private String s_passWord;

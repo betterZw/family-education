@@ -117,7 +117,7 @@ footer {
 	<hr>
 	<article class="createApp">
 		<div class="title">
-			<a href="${pageContext.request.contextPath }/FindAllStudentServlet">首页</a> &gt; 文件下载
+			<a href="${pageContext.request.contextPath }/FindAllTeacherServlet">首页</a> &gt; 文件下载
 		</div>
 	</article>
 	<h2>Course Files Downloads</h2>
@@ -154,13 +154,6 @@ footer {
 
 
 
-
-	<form method="post"
-		action="${pageContext.request.contextPath }/UploadServlet"
-		enctype="multipart/form-data">
-		选择一个文件: <input type="file" name="uploadFile" /> <br />
-		<br /> <input type="submit" value="上传" />
-	</form>
 
 
 	<footer>

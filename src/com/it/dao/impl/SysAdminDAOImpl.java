@@ -13,7 +13,6 @@ public class SysAdminDAOImpl implements ISysAdminDAO {
 
 	@Override
 	public boolean save(SysAdmin sysAdmin) {
-		// TODO Auto-generated method stub
 		return false;
 	}
 

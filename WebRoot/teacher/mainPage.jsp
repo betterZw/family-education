@@ -224,7 +224,7 @@
 														result.innerHTML += "${requestScope.messages }[i].m_isReply";
 														
 													}
-												} */wenj
+												} */
 											</script>
 								
 									<%-- <c:forEach items="${requestScope.messages }" var="message">
